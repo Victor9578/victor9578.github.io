@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>stu - Tag - Jaywxl</title>
+        <link>https://bl.jaywxl.eu.org/tags/stu/</link>
+        <description>stu - Tag - Jaywxl</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Sun, 27 Nov 2022 18:14:59 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/stu/" rel="self" type="application/rss+xml" /><item>
+    <title>03_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/03_stu/</link>
+    <pubDate>Sun, 27 Nov 2022 18:14:59 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/03_stu/</guid>
+    <description><![CDATA[01_返回交集 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如]]></description>
+</item>
+<item>
+    <title>02_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/02_stu/</link>
+    <pubDate>Sun, 27 Nov 2022 18:14:53 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/02_stu/</guid>
+    <description><![CDATA[01_找出出现一次的元素(reduce) 给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元]]></description>
+</item>
+<item>
+    <title>01_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/01_stu/</link>
+    <pubDate>Sun, 27 Nov 2022 17:47:50 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/01_stu/</guid>
+    <description><![CDATA[01_03题 旋转 转置 遍历 栈存方法（学习） matrix = [[7,4],[9,5],[6,3]] nn = [] print(list(zip(*matrix))[::-1]) matrix = map(list, zip(*matrix)) print(matrix) i = 1 while matrix != []: if i%4 == 1: aa = matrix.pop(0) for a in range(len(aa)): nn.append(aa.pop(0)) if i%4 == 3: bb = matrix.pop(-1) for a in range(len(bb)): nn.append(bb.pop(-1)) if (i+1)%4 == 3: for a in]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>blog - Tag - Jaywxl</title>
+        <link>https://bl.jaywxl.eu.org/tags/blog/</link>
+        <description>blog - Tag - Jaywxl</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Fri, 05 Feb 2021 21:18:46 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>First Post</title>
+    <link>https://bl.jaywxl.eu.org/posts/first-post/</link>
+    <pubDate>Fri, 05 Feb 2021 21:18:46 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/first-post/</guid>
+    <description><![CDATA[我的博客又要开始了 今后我会在vscode 来写markdown来更新我的blog 希望可以帮助到各位！！！😁]]></description>
+</item>
+</channel>
+</rss>

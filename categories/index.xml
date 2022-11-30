@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Jaywxl</title>
+        <link>https://bl.jaywxl.eu.org/categories/</link>
+        <description>Categories - Category - Jaywxl</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Wed, 30 Nov 2022 16:32:38 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>stu</title>
+    <link>https://bl.jaywxl.eu.org/categories/stu/</link>
+    <pubDate>Wed, 30 Nov 2022 16:32:38 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/categories/stu/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>post</title>
+    <link>https://bl.jaywxl.eu.org/categories/post/</link>
+    <pubDate>Mon, 19 Sep 2022 20:48:05 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/categories/post/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
