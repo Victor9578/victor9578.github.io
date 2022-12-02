@@ -4,15 +4,23 @@
         <link>https://bl.jaywxl.eu.org/</link>
         <description>Just For Fun</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
-            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Wed, 30 Nov 2022 16:32:38 &#43;0800</lastBuildDate>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Thu, 01 Dec 2022 16:10:39 &#43;0800</lastBuildDate>
             <atom:link href="https://bl.jaywxl.eu.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>08_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/08_stu/</link>
+    <pubDate>Thu, 01 Dec 2022 16:10:39 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/08_stu/</guid>
+    <description><![CDATA[链表]]></description>
+</item>
+<item>
     <title>07_stu</title>
     <link>https://bl.jaywxl.eu.org/posts/07_stu/</link>
     <pubDate>Wed, 30 Nov 2022 16:32:38 &#43;0800</pubDate>
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/07_stu/</guid>
-    <description><![CDATA[<p>开启链表的学习主要是快慢指针方法 或者 用哈希表的方法</p>]]></description>
+    <description><![CDATA[开启链表的学习主要是快慢指针方法 或者 用哈希表的方法]]></description>
 </item>
 <item>
     <title>06_stu</title>
@@ -77,14 +85,6 @@
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/miniapp/</guid>
     <description><![CDATA[miniapp 原网站jt.jaywxl.asia ,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。 现在已经将假条项目迁移至小程序。 可以微信搜索]]></description>
-</item>
-<item>
-    <title>XUST 自动打卡</title>
-    <link>https://bl.jaywxl.eu.org/posts/third/</link>
-    <pubDate>Wed, 17 Feb 2021 13:31:44 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/third/</guid>
-    <description><![CDATA[xust实现全自动打卡 这是个令人激动的时刻对于我们来说 这个项目让我们告别了每天繁琐的五点打卡 导员的催促、班委的通知 却也还是总让我们忘记，从而]]></description>
 </item>
 </channel>
 </rss>

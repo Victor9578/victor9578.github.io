@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>07_stu - Jaywxl</title><meta name="Description" content="Just For Fun"><meta property="og:title" content="07_stu" />
+        <title>07_stu - Jaywxl</title><meta name="Description" content="开启链表的学习主要是快慢指针方法 或者 用哈希表的方法"><meta property="og:title" content="07_stu" />
 <meta property="og:description" content="开启链表的学习主要是快慢指针方法 或者 用哈希表的方法" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bl.jaywxl.eu.org/posts/07_stu/" /><meta property="article:section" content="posts" />
@@ -17,7 +17,7 @@
 <meta name="application-name" content="Jaywxl">
 <meta name="apple-mobile-web-app-title" content="Jaywxl"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bl.jaywxl.eu.org/posts/07_stu/" /><link rel="prev" href="https://bl.jaywxl.eu.org/posts/06_stu/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bl.jaywxl.eu.org/posts/07_stu/" /><link rel="prev" href="https://bl.jaywxl.eu.org/posts/06_stu/" /><link rel="next" href="https://bl.jaywxl.eu.org/posts/08_stu/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,13 +26,13 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bl.jaywxl.eu.org\/posts\/07_stu\/"
-        },"genre": "posts","keywords": "数据结构, 链表","wordcount":  573 ,
+        },"genre": "posts","keywords": "数据结构, 链表","wordcount":  548 ,
         "url": "https:\/\/bl.jaywxl.eu.org\/posts\/07_stu\/","datePublished": "2022-11-30T16:32:38+08:00","dateModified": "2022-11-30T16:32:38+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Jw"
-            },"description": ""
+            },"description": "开启链表的学习主要是快慢指针方法 或者 用哈希表的方法"
     }
     </script></head>
     <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -103,7 +103,7 @@
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">07_stu</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/Victor9578" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Jw</a>
 </span>&nbsp;<span class="post-category">included in <a href="/categories/stu/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>stu</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-30">2022-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;573 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-30">2022-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;548 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -116,8 +116,7 @@
     <li><a href="#2_链表递归">2_链表递归</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>开启链表的学习主要是快慢指针方法 或者 用哈希表的方法</p>
-<h2 id="1_链表_判断是否有环">1_链表_判断是否有环</h2>
+            </div><div class="content" id="content"><h2 id="1_链表_判断是否有环">1_链表_判断是否有环</h2>
 <p>开启链表的学习主要是快慢指针方法 或者 用哈希表的方法
 <figure><a class="lightgallery" href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" title="leecode_链表" data-thumbnail="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" data-sub-html="<h2>leecode_链表</h2><p>leecode_链表</p>">
         <img
@@ -219,7 +218,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/06_stu/" class="prev" rel="prev" title="06_stu"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>06_stu</a></div>
+    <div class="post-nav"><a href="/posts/06_stu/" class="prev" rel="prev" title="06_stu"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>06_stu</a>
+            <a href="/posts/08_stu/" class="next" rel="next" title="08_stu">08_stu<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="gitalk" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
