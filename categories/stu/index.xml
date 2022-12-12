@@ -4,7 +4,31 @@
         <link>https://bl.jaywxl.eu.org/categories/stu/</link>
         <description>stu - Category - Jaywxl</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
-            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Mon, 05 Dec 2022 20:22:14 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/stu/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/stu/" rel="self" type="application/rss+xml" /><item>
+    <title>14_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/14_stu/</link>
+    <pubDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/14_stu/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>13_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/13_stu/</link>
+    <pubDate>Sun, 11 Dec 2022 23:34:11 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/13_stu/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>12_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/12_stu/</link>
+    <pubDate>Wed, 07 Dec 2022 17:10:59 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/12_stu/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>11_stu</title>
     <link>https://bl.jaywxl.eu.org/posts/11_stu/</link>
     <pubDate>Mon, 05 Dec 2022 20:22:14 &#43;0800</pubDate>
@@ -59,14 +83,6 @@
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/02_stu/</guid>
     <description><![CDATA[01_找出出现一次的元素(reduce) 给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元]]></description>
-</item>
-<item>
-    <title>01_stu</title>
-    <link>https://bl.jaywxl.eu.org/posts/01_stu/</link>
-    <pubDate>Sun, 27 Nov 2022 17:47:50 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/01_stu/</guid>
-    <description><![CDATA[01_03题 旋转 转置 遍历 栈存方法（学习） matrix = [[7,4],[9,5],[6,3]] nn = [] print(list(zip(*matrix))[::-1]) matrix = map(list, zip(*matrix)) print(matrix) i = 1 while matrix != []: if i%4 == 1: aa = matrix.pop(0) for a in range(len(aa)): nn.append(aa.pop(0)) if i%4 == 3: bb = matrix.pop(-1) for a in range(len(bb)): nn.append(bb.pop(-1)) if (i+1)%4 == 3: for a in]]></description>
 </item>
 </channel>
 </rss>
