@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="referrer" content="no-referrer" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>11_stu - Jaywxl</title><meta name="Description" content="动态规划之最少趟数"><meta property="og:title" content="11_stu" />
+<meta property="og:description" content="动态规划之最少趟数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bl.jaywxl.eu.org/posts/11_stu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-05T20:22:14+08:00" />
+<meta property="article:modified_time" content="2022-12-05T20:22:14+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="11_stu"/>
+<meta name="twitter:description" content="动态规划之最少趟数"/>
+<meta name="application-name" content="Jaywxl">
+<meta name="apple-mobile-web-app-title" content="Jaywxl"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bl.jaywxl.eu.org/posts/11_stu/" /><link rel="prev" href="https://bl.jaywxl.eu.org/posts/10_stu/" /><link rel="next" href="https://bl.jaywxl.eu.org/posts/12_stu/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "11_stu",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bl.jaywxl.eu.org\/posts\/11_stu\/"
+        },"genre": "posts","keywords": "动态规划","wordcount":  433 ,
+        "url": "https:\/\/bl.jaywxl.eu.org\/posts\/11_stu\/","datePublished": "2022-12-05T20:22:14+08:00","dateModified": "2022-12-05T20:22:14+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Jw"
+            },"description": "动态规划之最少趟数"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jaywxl" class="goo"><svg width="32" height="32" viewBox="0 0 1024 1024"><path fill="currentColor" d="m955.7 856l-416-720c-6.2-10.7-16.9-16-27.7-16s-21.6 5.3-27.7 16l-416 720C56 877.4 71.4 904 96 904h832c24.6 0 40-26.6 27.7-48zm-790.4-23.9L512 231.9L858.7 832H165.3zm319-474.1l-228 394c-12.3 21.3 3.1 48 27.7 48h455.8c24.7 0 40.1-26.7 27.7-48L539.7 358c-6.2-10.7-17-16-27.7-16c-10.8 0-21.6 5.3-27.7 16zm214 386H325.7L512 422l186.3 322zm-214-194.1l-57 98.4C415 669.5 430.4 696 455 696h114c24.6 0 39.9-26.5 27.7-47.7l-57-98.4c-6.1-10.6-16.9-15.9-27.7-15.9s-21.5 5.3-27.7 15.9zm57.1 98.4h-58.7l29.4-50.7l29.3 50.7z"/></svg>
+                        Jaywxl</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/Victor9578" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jaywxl"><span class="header-title-pre"> </span>Jaywxl</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/Victor9578" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">11_stu</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/Victor9578" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Jw</a>
+</span>&nbsp;<span class="post-category">included in <a href="/categories/stu/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>stu</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-05">2022-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;433 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#02_路径总和">02_路径总和</a></li>
+    <li><a href="#02_搜索二叉树">02_搜索二叉树</a></li>
+    <li><a href="#init_stock_trade">init_stock_trade</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw" aria-hidden="true"></i>Target<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li><i class="far fa-check-square fa-fw" aria-hidden="true"></i> see 动态规划</li>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> init github&quot;stock_trade&quot; and ReadMe</li>
+</ul>
+</div>
+        </div>
+    </div>
+<h2 id="02_路径总和">02_路径总和</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Definition for a binary tree node.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># class TreeNode:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     def __init__(self, val=0, left=None, right=None):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         self.val = val</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         self.left = left</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         self.right = right</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># class Solution:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -&gt; bool:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         if root:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             targetSum = targetSum - root.val</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         else:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             return False</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         stack = []</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         sum = []</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#         while root:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             print(root)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             a,b = float(&#39;-inf&#39;),float(&#39;-inf&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             if root.left: a = root.left.val</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             if root.right: b = root.right.val</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             if root.right and root.left:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 stack.append(root)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 sum.append(targetSum)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             if a &gt; b :</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 targetSum -= a</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 root = root.left</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             else:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 targetSum -= b</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 root = root.right</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             print(root)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             if targetSum != 0 and not root.left and not root.right and  stack:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 root = stack.pop()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 targetSum = sum.pop()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 if root.right.val &gt; root.left.val:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                     root.right = None</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 else:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                     root.left = None</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             elif targetSum == 0 and not root.left and not root.right:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 return True </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#             elif targetSum != 0 and not root.left and not root.right:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                 return False</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">最终被击溃在两个子节点数值相等的问题上导致无法回溯，可以优化存在栈里面回溯的treenode，将选择的一边设为None
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Method_递归</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">hasPathSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">],</span> <span class="n">targetSum</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">targetSum</span> <span class="o">==</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasPathSum</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">targetSum</span> <span class="o">-</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasPathSum</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">targetSum</span> <span class="o">-</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="02_搜索二叉树">02_搜索二叉树</h2>
+<blockquote>
+<p>搜索二叉树满足对于任意节点 root 而言，左子树（如果存在）上所有节点的值均小于 \textit{root.val}root.val，右子树（如果存在）上所有节点的值均大于 \textit{root.val}root.val，且它们都是二叉搜索树。
+递归</p>
+</blockquote>
+<h2 id="init_stock_trade">init_stock_trade</h2></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-12-05</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/10_stu/" class="prev" rel="prev" title="10_stu"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>10_stu</a>
+            <a href="/posts/12_stu/" class="next" rel="next" title="12_stu">12_stu<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Just For Fun</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/Victor9578" target="_blank">Jw</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"gitalk":{"admin":["Victor9578"],"clientID":"0a4bcf59a7b3744bcdcc","clientSecret":"7426010592f8472a9fc11f00a9a0861e0fd187cf","id":"2022-12-05T20:22:14+08:00","owner":"Victor9578","repo":"victor9578.github.io","title":"11_stu"}},"lightgallery":true,"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
