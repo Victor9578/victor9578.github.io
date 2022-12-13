@@ -4,7 +4,15 @@
         <link>https://bl.jaywxl.eu.org/tags/</link>
         <description>Tags - Tag - Jaywxl</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
-            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Mon, 12 Dec 2022 18:42:24 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>前缀和法</title>
+    <link>https://bl.jaywxl.eu.org/tags/%E5%89%8D%E7%BC%80%E5%92%8C%E6%B3%95/</link>
+    <pubDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/tags/%E5%89%8D%E7%BC%80%E5%92%8C%E6%B3%95/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>bilibili</title>
     <link>https://bl.jaywxl.eu.org/tags/bilibili/</link>
     <pubDate>Mon, 12 Dec 2022 18:42:24 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Tue, 29 Nov 2022 14:07:55 &#43;0800</pubDate>
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/tags/sql/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>stu</title>
-    <link>https://bl.jaywxl.eu.org/tags/stu/</link>
-    <pubDate>Sun, 27 Nov 2022 18:14:59 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/tags/stu/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
