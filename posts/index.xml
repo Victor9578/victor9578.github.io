@@ -4,7 +4,31 @@
         <link>https://bl.jaywxl.eu.org/posts/</link>
         <description>All Posts | Jaywxl</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
-            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Thu, 10 Aug 2023 12:22:29 &#43;0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>故地重游_汉中行</title>
+    <link>https://bl.jaywxl.eu.org/posts/bcak_here_again/</link>
+    <pubDate>Thu, 10 Aug 2023 12:22:29 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/bcak_here_again/</guid>
+    <description><![CDATA[缘起 第一次来汉中是在22年的八月份，炎炎的烈日灼烧着我最后的暑假，滚烫的热浪卷着我步入纷杂的社会。 刚进单位的时候，在西安办完了所有的手续，直]]></description>
+</item>
+<item>
+    <title>Music_抱着你</title>
+    <link>https://bl.jaywxl.eu.org/posts/music_baozheni/</link>
+    <pubDate>Wed, 01 Feb 2023 21:58:28 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/music_baozheni/</guid>
+    <description><![CDATA[很久没写了，暂时搁置了转行的想法，回听起这首《抱着你》，提升不会放下，路也会沿着你的脚步想你铺来]]></description>
+</item>
+<item>
+    <title>15_stu</title>
+    <link>https://bl.jaywxl.eu.org/posts/15_stu/</link>
+    <pubDate>Thu, 15 Dec 2022 21:44:43 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/15_stu/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>14_stu</title>
     <link>https://bl.jaywxl.eu.org/posts/14_stu/</link>
     <pubDate>Mon, 12 Dec 2022 21:43:13 &#43;0800</pubDate>
@@ -59,30 +83,6 @@
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/08_09_stu/</guid>
     <description><![CDATA[链表]]></description>
-</item>
-<item>
-    <title>07_stu</title>
-    <link>https://bl.jaywxl.eu.org/posts/07_stu/</link>
-    <pubDate>Wed, 30 Nov 2022 16:32:38 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/07_stu/</guid>
-    <description><![CDATA[开启链表的学习主要是快慢指针方法 或者 用哈希表的方法]]></description>
-</item>
-<item>
-    <title>06_stu</title>
-    <link>https://bl.jaywxl.eu.org/posts/06_stu/</link>
-    <pubDate>Tue, 29 Nov 2022 14:07:55 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/06_stu/</guid>
-    <description><![CDATA[01_adddate 输入： Weather 表： +----+------------+-------------+ | id | recordDate | Temperature | +----+------------+-------------+ | 1 | 2015-01-01 | 10 | | 2 | 2015-01-02 | 25 | | 3 | 2015-01-03 | 20 | | 4 | 2015-01-04 | 30 | +----+------------+-------------+ 输出： +----+ | id | +----+ | 2 | | 4 | +----+ 解释： 2015-01-02 的温度比前一]]></description>
-</item>
-<item>
-    <title>05_stu</title>
-    <link>https://bl.jaywxl.eu.org/posts/05_stu/</link>
-    <pubDate>Mon, 28 Nov 2022 16:55:58 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/05_stu/</guid>
-    <description><![CDATA[01_sql 给定一个表 tree，id 是树节点的编号， p_id 是它父节点的 id 。 +----+------+ | id | p_id | +----+------+ | 1 | null | | 2 | 1 | | 3 | 1 | | 4 | 2 | | 5 | 2 | +----+------+ 树中每个节点属]]></description>
 </item>
 </channel>
 </rss>
