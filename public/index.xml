@@ -4,15 +4,23 @@
         <link>https://bl.jaywxl.eu.org/</link>
         <description>Just For Fun</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>jaywxl@jaywxl.ml (Jw)</managingEditor>
-            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Thu, 10 Aug 2023 12:22:29 &#43;0800</lastBuildDate>
+            <webMaster>jaywxl@jaywxl.ml (Jw)</webMaster><lastBuildDate>Fri, 11 Aug 2023 21:38:29 &#43;0800</lastBuildDate>
             <atom:link href="https://bl.jaywxl.eu.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Long_ago_compostion</title>
+    <link>https://bl.jaywxl.eu.org/posts/long_ago_compostion/</link>
+    <pubDate>Fri, 11 Aug 2023 21:38:29 &#43;0800</pubDate>
+    <author>Jw</author>
+    <guid>https://bl.jaywxl.eu.org/posts/long_ago_compostion/</guid>
+    <description><![CDATA[在这里 向长安，对秋灯，几人老？ 这是一抔喧哗了千年的黄土，是十三朝顶礼膜拜的故都。这里秦时的明月正皎洁，汉代的城门正轻启。 秦始皇在这里挥剑浮云]]></description>
+</item>
+<item>
     <title>故地重游_汉中行</title>
     <link>https://bl.jaywxl.eu.org/posts/bcak_here_again/</link>
     <pubDate>Thu, 10 Aug 2023 12:22:29 &#43;0800</pubDate>
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/bcak_here_again/</guid>
-    <description><![CDATA[缘起 第一次来汉中是在22年的八月份，炎炎的烈日灼烧着我最后的暑假，滚烫的热浪卷着我步入纷杂的社会。 刚进单位的时候，在西安办完了所有的手续，直]]></description>
+    <description><![CDATA[缘起 第一次来汉中是在22年的八月份，那年夏天很热。炎炎的烈日烤干了我最后的暑期，滚烫的热浪就迫不及待地卷着我走入这纷杂的社会。 刚进单位，在西]]></description>
 </item>
 <item>
     <title>Music_抱着你</title>
@@ -77,14 +85,6 @@
     <author>Jw</author>
     <guid>https://bl.jaywxl.eu.org/posts/10_stu/</guid>
     <description><![CDATA[二叉树递归、迭代的学习]]></description>
-</item>
-<item>
-    <title>08_09_stu</title>
-    <link>https://bl.jaywxl.eu.org/posts/08_09_stu/</link>
-    <pubDate>Thu, 01 Dec 2022 16:10:39 &#43;0800</pubDate>
-    <author>Jw</author>
-    <guid>https://bl.jaywxl.eu.org/posts/08_09_stu/</guid>
-    <description><![CDATA[链表]]></description>
 </item>
 </channel>
 </rss>
