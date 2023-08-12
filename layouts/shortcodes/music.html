@@ -1,50 +1,28 @@
-{{- $theme := "#448aff" -}}
-{{- if .IsNamedParams -}}
-    {{- $theme = .Get "theme" | default $theme -}}
-    {{- if .Get "url" -}}
-        {{- $url := .Get "url" -}}
-        {{- with dict "Path" $url "Resources" .Page.Resources | partial "function/resource.html" -}}
-            {{- $url = .RelPermalink -}}
-        {{- end -}}
-        {{- $cover := .Get "cover" -}}
-        {{- with dict "Path" $cover "Resources" .Page.Resources | partial "function/resource.html" -}}
-            {{- $cover = .RelPermalink -}}
-        {{- end -}}
-        <meting-js url="{{ $url }}" name="{{ .Get `name` }}" artist="{{ .Get `artist` }}" cover="{{ $cover }}" theme="{{ $theme }}"
-        {{- with .Get "fixed" }} fixed="{{ . }}"{{ end -}}
-        {{- with .Get "mini" }} mini="{{ . }}"{{ end -}}
-        {{- with .Get "autoplay" }} autoplay="{{ . }}"{{ end -}}
-        {{- with .Get "volume" }} volume="{{ . }}"{{ end -}}
-        {{- with .Get "mutex" }} mutex="{{ . }}"{{ end -}}
-        ></meting-js>
-    {{- else if .Get "auto" -}}
-        <meting-js auto="{{ .Get `auto` }}" theme="{{ $theme }}"
-        {{- with .Get "fixed" }} fixed="{{ . }}"{{ end -}}
-        {{- with .Get "mini" }} mini="{{ . }}"{{ end -}}
-        {{- with .Get "autoplay" }} autoplay="{{ . }}"{{ end -}}
-        {{- with .Get "loop" }} loop="{{ . }}"{{ end -}}
-        {{- with .Get "order" }} order="{{ . }}"{{ end -}}
-        {{- with .Get "volume" }} volume="{{ . }}"{{ end -}}
-        {{- with .Get "mutex" }} mutex="{{ . }}"{{ end -}}
-        {{- with .Get "list-folded" }} list-folded="{{ . }}"{{ end -}}
-        {{- with .Get "list-max-height" }} list-max-height="{{ . }}"{{ end -}}
-        ></meting-js>
-    {{- else -}}
-        <meting-js server="{{ .Get `server` }}" type="{{ .Get `type` }}" id="{{ .Get `id` }}" theme="{{ $theme }}"
-        {{- with .Get "fixed" }} fixed="{{ . }}"{{ end -}}
-        {{- with .Get "mini" }} mini="{{ . }}"{{ end -}}
-        {{- with .Get "autoplay" }} autoplay="{{ . }}"{{ end -}}
-        {{- with .Get "loop" }} loop="{{ . }}"{{ end -}}
-        {{- with .Get "order" }} order="{{ . }}"{{ end -}}
-        {{- with .Get "volume" }} volume="{{ . }}"{{ end -}}
-        {{- with .Get "mutex" }} mutex="{{ . }}"{{ end -}}
-        {{- with .Get "list-folded" }} list-folded="{{ . }}"{{ end -}}
-        {{- with .Get "list-max-height" }} list-max-height="{{ . }}"{{ end -}}
-        ></meting-js>
-    {{- end -}}
-{{- else if (.Get 0 | urls.Parse).Host -}}
-    <meting-js auto="{{ .Get 0 }}" theme="{{ $theme }}"></meting-js>
-{{- else -}}
-    <meting-js server="{{ .Get 0 }}" type="{{ .Get 1 }}" id="{{ .Get 2 }}" theme="{{ $theme }}"></meting-js>
-{{- end -}}
-{{- .Page.Scratch.SetInMap "this" "music" true -}}
+<!--
+based on https://github.com/metowolf/MetingJS
+https://matnoble.me/posts/shortcodes-practice-tutorial-for-hugo/#music
+-->
+
+{{ if .IsNamedParams }}
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+  
+    <meting-js
+      id="{{ .Get "id" }}"
+      server="{{ .Get "server" }}"
+      type="{{ .Get "type" }}"
+      fixed="{{ if .Get "fixed" }}{{ .Get "fixed" }}{{ else }}false{{ end }}"
+      mini="{{ if .Get "mini" }}{{ .Get "mini" }}{{ else }}false{{ end }}"
+      autoplay="{{ if .Get "autoplay" }}{{ .Get "autoplay" }}{{ else }}false{{ end }}"
+      loop="{{ if .Get "loop" }}{{ .Get "loop" }}{{ else }}none{{ end }}"
+      theme="{{ if .Get "autoplay" }}{{ .Get "autoplay" }}{{ else }}#255579{{ end }}"
+      volume="{{ if .Get "volume" }}{{ .Get "volume" }}{{ else }}0.6{{ end }}"
+      prelosd="{{ if .Get "prelosd" }}{{ .Get "prelosd" }}{{ else }}auto{{ end }}"
+      mutex="{{ if .Get "mutex" }}{{ .Get "mutex" }}{{ else }}true{{ end }}"
+      list-folded="{{ if .Get "list-folded" }}{{ .Get "list-folded" }}{{ else }}true{{ end }}">
+    </meting-js>
+  
+{{ end }}
