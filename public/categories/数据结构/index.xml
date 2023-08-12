@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>数据结构 on Jaywxl</title>
-    <link>https://bl.jawyxl.eu.org/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <link>https://bl.jaywxl.eu.org/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
     <description>Recent content in 数据结构 on Jaywxl</description>
     <image>
       <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Sat, 03 Dec 2022 15:39:25 +0800</lastBuildDate><atom:link href="https://bl.jawyxl.eu.org/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 15:39:25 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>10_stu</title>
-      <link>https://bl.jawyxl.eu.org/posts/study/10_stu/</link>
+      <link>https://bl.jaywxl.eu.org/posts/study/10_stu/</link>
       <pubDate>Sat, 03 Dec 2022 15:39:25 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/study/10_stu/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/study/10_stu/</guid>
       <description>二叉树递归、迭代的学习</description>
       <content:encoded><![CDATA[<h1 id="二叉树">二叉树</h1>
 <p><figure><a class="lightgallery" href="https://m.360buyimg.com/babel/jfs/t1/11877/31/20745/150895/638b3faeEfcb34dfc/3f604924123fd457.png" title="img" data-thumbnail="https://m.360buyimg.com/babel/jfs/t1/11877/31/20745/150895/638b3faeEfcb34dfc/3f604924123fd457.png">

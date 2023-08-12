@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>sql on Jaywxl</title>
-    <link>https://bl.jawyxl.eu.org/categories/sql/</link>
+    <link>https://bl.jaywxl.eu.org/categories/sql/</link>
     <description>Recent content in sql on Jaywxl</description>
     <image>
       <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Thu, 01 Dec 2022 16:10:39 +0800</lastBuildDate><atom:link href="https://bl.jawyxl.eu.org/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 16:10:39 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>08_09_stu</title>
-      <link>https://bl.jawyxl.eu.org/posts/study/08_09_stu/</link>
+      <link>https://bl.jaywxl.eu.org/posts/study/08_09_stu/</link>
       <pubDate>Thu, 01 Dec 2022 16:10:39 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/study/08_09_stu/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/study/08_09_stu/</guid>
       <description>链表</description>
       <content:encoded><![CDATA[<h2 id="01_栈_哈希表_有效括号">01_栈_哈希表_有效括号</h2>
 <p>给定一个只包括 &lsquo;(&rsquo;，&rsquo;)&rsquo;，&rsquo;{&rsquo;，&rsquo;}&rsquo;，&rsquo;[&rsquo;，&rsquo;]&rsquo; 的字符串 s ，判断字符串是否有效。</p>

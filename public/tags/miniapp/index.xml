@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>miniapp on Jaywxl</title>
-    <link>https://bl.jawyxl.eu.org/tags/miniapp/</link>
+    <link>https://bl.jaywxl.eu.org/tags/miniapp/</link>
     <description>Recent content in miniapp on Jaywxl</description>
     <image>
       <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Wed, 29 Sep 2021 19:53:03 +0800</lastBuildDate><atom:link href="https://bl.jawyxl.eu.org/tags/miniapp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 19:53:03 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/miniapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Miniapp</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/miniapp/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/miniapp/</link>
       <pubDate>Wed, 29 Sep 2021 19:53:03 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/miniapp/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/miniapp/</guid>
       <description>miniapp 原网站jt.jaywxl.asia ,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。 现在已经将假条项目迁移至小程序。 可以微信搜索</description>
       <content:encoded><![CDATA[<hr>
 <h1 id="miniapp">miniapp</h1>

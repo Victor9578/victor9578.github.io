@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>post on Jaywxl</title>
-    <link>https://bl.jawyxl.eu.org/categories/post/</link>
+    <link>https://bl.jaywxl.eu.org/categories/post/</link>
     <description>Recent content in post on Jaywxl</description>
     <image>
       <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
-    <lastBuildDate>Mon, 19 Sep 2022 20:48:05 +0800</lastBuildDate><atom:link href="https://bl.jawyxl.eu.org/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Sep 2022 20:48:05 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firth</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/firth/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/firth/</link>
       <pubDate>Mon, 19 Sep 2022 20:48:05 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/firth/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/firth/</guid>
       <description>时光笔记_1 生活小感慨 快乐的时光总是短暂的，进入了社会的小同志才知道学校的美好时光。那无忧无虑，那轻松惬意，那青春气息。 美好小回忆 想起的都是</description>
       <content:encoded><![CDATA[<h1 id="时光笔记_1">时光笔记_1</h1>
 <h3 id="生活小感慨">生活小感慨</h3>
@@ -37,10 +37,10 @@
     
     <item>
       <title>Miniapp</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/miniapp/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/miniapp/</link>
       <pubDate>Wed, 29 Sep 2021 19:53:03 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/miniapp/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/miniapp/</guid>
       <description>miniapp 原网站jt.jaywxl.asia ,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。 现在已经将假条项目迁移至小程序。 可以微信搜索</description>
       <content:encoded><![CDATA[<hr>
 <h1 id="miniapp">miniapp</h1>
@@ -73,10 +73,10 @@
     
     <item>
       <title>XUST 自动打卡</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/third/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/third/</link>
       <pubDate>Wed, 17 Feb 2021 13:31:44 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/third/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/third/</guid>
       <description>xust实现全自动打卡 这是个令人激动的时刻对于我们来说 这个项目让我们告别了每天繁琐的五点打卡 导员的催促、班委的通知 却也还是总让我们忘记，从而</description>
       <content:encoded><![CDATA[<h1 id="xust实现全自动打卡">xust实现全自动打卡</h1>
 <hr>
@@ -167,10 +167,10 @@
     
     <item>
       <title>影视收藏</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/secend/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/secend/</link>
       <pubDate>Fri, 05 Feb 2021 21:56:57 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/secend/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/secend/</guid>
       <description>影视收藏 😜🤥 不定期更新 所有站点都来源于互联网 低端影视 哔嘀影视 真不卡 片库 独播库 奈飞中文电影站 泥巴影院 Tubitv 剧嗨 一些种子站点 --by Jaywxl</description>
       <content:encoded><![CDATA[<h1 id="影视收藏">影视收藏</h1>
 <p>😜🤥<br>
@@ -209,10 +209,10 @@
     
     <item>
       <title>First Post</title>
-      <link>https://bl.jawyxl.eu.org/posts/life/first-post/</link>
+      <link>https://bl.jaywxl.eu.org/posts/life/first-post/</link>
       <pubDate>Fri, 05 Feb 2021 21:18:46 +0800</pubDate>
       
-      <guid>https://bl.jawyxl.eu.org/posts/life/first-post/</guid>
+      <guid>https://bl.jaywxl.eu.org/posts/life/first-post/</guid>
       <description>我的博客又要开始了 今后我会在vscode 来写markdown来更新我的blog 希望可以帮助到各位！！！😁</description>
       <content:encoded><![CDATA[<h1 id="我的博客又要开始了">我的博客又要开始了</h1>
 <p>今后我会在vscode 来写markdown来更新我的blog 希望可以帮助到各位！！！😁</p>
