@@ -4,29 +4,23 @@ date: 2023-02-01T21:58:28+08:00
 draft: false
 tags: ['bilibili']
 categories: ['Music']
-description: 很久没写了，暂时搁置了转行的想法，回听起这首《抱着你》，提升不会放下，路也会沿着你的脚步想你铺来
 
-featuredImage: ""
-featuredImagePreview: "https://i0.hdslb.com/bfs/archive/6fe66128f3a4ca1ba2a3cb8edf39cc2e25316005.jpg@203w_127h_1e_1c.webp"
+summary: "很久没写了，暂时搁置了转行的想法，回听起这首《抱着你》，提升不会放下，路也会沿着你的脚步想你铺来" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "https://i0.hdslb.com/bfs/archive/6fe66128f3a4ca1ba2a3cb8edf39cc2e25316005.jpg@203w_127h_1e_1c.webp" # 图片链接 #
+    alt: "miaoer_baozheni" # 图片名称 #
+    hidden: true # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
-
-  # ...
+ShowToc: true #显示toc目录树 #
+TocOpen: true # toc目录树展开 #
+katex: true # 数学公式 #
+mermaid: true # 流程图 #
+weight: false # 置顶 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
-
-<!--more-->
 
 # 聊一聊这段时间
 

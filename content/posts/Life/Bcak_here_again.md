@@ -1,30 +1,25 @@
 ---
-title: "故地重游_汉中行"
-date: 2023-08-10T12:22:29+08:00
-draft: false
-tags: ['Life']
-categories: ['stu']
-description: "故地重游，在人生的十字路口来到汉中，心里很是开心。这个地方还留存着步入社会的第一个脚印，今天走过了了旧人旧事老地方，交织着的回忆与现况，潸然泪下，以记此文"
-
-featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
-
-toc:
-  enable: true
-  auto: true
-
-  # ...
+title: "故地重游_汉中行" # 日期 #
+slug: "" # 链接名称 #
+summary: "故地重游，在人生的十字路口来到汉中，心里很是开心。这个地方还留存着步入社会的第一个脚印，今天走过了了旧人旧事老地方，交织着的回忆与现况，潸然泪下，以记此文" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
+date: 2023-08-10T12:22:29+08:00 # 日期 #
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: true # 文章内不显示/显示 #
+categories: [Life] # 分类 #
+tags: [Hanzhong] # 标签 #
+ShowToc: ture #显示toc目录树 #
+TocOpen: ture # toc目录树展开 #
+katex: ture # 数学公式 #
+mermaid: ture # 流程图 #
+draft: false # 草稿与否 #
+weight: false # 置顶 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
+
 
 
 ## 缘起

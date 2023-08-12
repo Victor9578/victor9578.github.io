@@ -1,5 +1,5 @@
-baseURL: "https://xx.xx/"
-title: SeerSu
+baseURL: "https://bl.jawyxl.eu.org/"
+title: Jaywxl
 paginate: 10
 theme: PaperMod
 defaultContentLanguage: cn
@@ -74,7 +74,7 @@ languages:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Blog,hugo"
-    author: xxx
+    author: Jw_OvO
     # author: ["Me", "You"] # multiple authors
     keywords: ["hugo", "Blog",]
     
@@ -93,13 +93,13 @@ params:
     ShowBreadCrumbs: true
     ShowWordCount: true
     ShowCodeCopyButtons: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowFullTextinRSS: true
     enableimgloop: true
     hideMeta: false
     ShowToc: true
     comments: true
-    hideFooter: true # 使用自定义footer(新增备案号)，隐藏原footer
+    hideFooter:  # 使用自定义footer(新增备案号)，隐藏原footer
     katex: false
     images: ["https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png"] # link or path of image for opengraph, twitter-cards
 
@@ -120,7 +120,7 @@ params:
     homeInfoParams:
         Title: "Hi Friends!👋"
         Content: >
-            我是SeerSu，欢迎来到我的站点！😁
+            欢迎来到我的站点！😁
     socialIcons:
         - name: email
           url: "mailto:xx@xx.com"
@@ -135,7 +135,7 @@ params:
         appendFilePath: false # to append file path to Edit link
 
     label:
-        text: "SeerSu"
+        text: "Jaywxl"
         icon: /img/avatar.png
         iconHeight: 30
 

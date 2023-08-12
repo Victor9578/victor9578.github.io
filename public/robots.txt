@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bl.jawyxl.eu.org/sitemap.xml
