@@ -22,7 +22,7 @@ description: '二叉树递归、迭代的学习'
 ---
 ---
 
-<!--more-->
+  
 # 二叉树
 
 ![img](https://m.360buyimg.com/babel/jfs/t1/11877/31/20745/150895/638b3faeEfcb34dfc/3f604924123fd457.png "")

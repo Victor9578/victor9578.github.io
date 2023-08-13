@@ -22,7 +22,7 @@ description: "动态规划之最少趟数"
 ---
 ---
 
-<!--more-->
+  
 
 {{<admonition note "Target">}}
 

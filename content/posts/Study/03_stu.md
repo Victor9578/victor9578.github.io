@@ -91,5 +91,5 @@ from PAtients
 where conditions regexp '^DIAB1|\\sDIAB1'; # 正则表达式
 where conditions like 'DIAB1%' or conditions like '% DIAB1%' #like的匹配得有百分号（类似于*） 否则该语句等同于=
 ```
-<!--
+ 
 

@@ -22,7 +22,7 @@ description:
 ---
 ---
 
-<!--more-->
+  
 
 ## sql_Rank()函数
 
