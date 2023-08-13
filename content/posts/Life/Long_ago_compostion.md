@@ -2,35 +2,6 @@
 title: "Long_ago_compostion"
 date: 2023-08-11T21:38:29+08:00
 draft: false
-tags: []
-categories: ['stu']
-description:
-
-featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
-
-toc:
-  enable: true
-  auto: true
-
-  # ...
----
-
-
----
-title: "Long_ago_compostion"
-date: 2023-08-11T21:38:29+08:00
-draft: false
 tags: [美文]
 categories: [stu]
 
