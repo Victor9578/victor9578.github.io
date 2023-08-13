@@ -4,26 +4,22 @@ date: 2022-12-03T15:39:25+08:00
 draft: false
 tags: ['二叉树']
 categories: ['数据结构']
+
+summary: "" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
+
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
+
+weight: false # 置顶 一般置顶 10（同weight参考时间）#
+
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
 description: '二叉树递归、迭代的学习'
-
-featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
-
-toc:
-  enable: true
-  auto: true
-
-  # ...
+---
 ---
 
 <!--more-->

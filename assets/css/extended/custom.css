@@ -4,15 +4,15 @@
 }
 
 body, .admonition {
-    font-family: "SmileySans",Merriweather,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
+    font-family: system-ui,"SmileySans",Merriweather,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
 }
 
 h1, h2, h3, h4, h5, h6, .toc, footer, .archive-meta {
-    font-family: "SmileySans",HarmonyOS_Medium,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
+    font-family: system-ui,"SmileySans",HarmonyOS_Medium,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
 }
 
 .post-content, .post-meta, .entry-content {
-    font-family: "HarmonyOS_Medium",system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
+    font-family: system-ui,"HarmonyOS_Medium",Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial;
 }
 
 ol {
@@ -125,9 +125,11 @@ figure .image-caption:not(:empty) {
 
 figure img {
     display: block;
-    height: auto;
+    width: 720px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: var(--radius);
+
 }
 
 /* 封面图样式修改 */

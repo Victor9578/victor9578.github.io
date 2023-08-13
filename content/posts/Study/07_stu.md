@@ -4,29 +4,22 @@ date: 2022-11-30T16:32:38+08:00
 draft: false
 tags: ['数据结构','链表']
 categories: ['stu']
+
+summary: "" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
+
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
+
+weight: false # 置顶 一般置顶 10（同weight参考时间）#
+
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
 description: "开启链表的学习主要是快慢指针方法 或者 用哈希表的方法"
-
-featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: true
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
-
-toc:
-  enable: true
-  auto: true
-
-  # ...
 ---
-
-<!--more-->
 ## 1_链表_判断是否有环
 开启链表的学习主要是快慢指针方法 或者 用哈希表的方法
 ![leecode_链表](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png "leecode_链表")  

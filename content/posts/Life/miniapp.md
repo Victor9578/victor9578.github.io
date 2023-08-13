@@ -2,30 +2,26 @@
 title: "Miniapp"
 date: 2021-09-29T19:53:03+08:00
 draft: false
-tags: ['miniapp']
-categories: ['post']
+tags: [miniapp]
+categories: [stu]
 
-featuredImage: ""
-featuredImagePreview: ""
+summary: "XUST 我在校园 请假小程序" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-twemoji: true
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: true # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
+weight: 10 # 置顶 一般置顶 10（同weight参考时间）#
 
-  # ...
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
 
----
+
 # miniapp
 
 原网站[jt.jaywxl.asia](jt.jaywxl.asia),因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。
@@ -35,7 +31,7 @@ toc:
 
 * 可以微信搜索Jaywxl
 ---
-* ![jpg](../../images/jaymini.jpg)
+* ![jpg](/images/jaymini.jpg)
   
 
 ---

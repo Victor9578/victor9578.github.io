@@ -26,7 +26,34 @@ toc:
   # ...
 ---
 
+
+---
+title: "Long_ago_compostion"
+date: 2023-08-11T21:38:29+08:00
+draft: false
+tags: [美文]
+categories: [stu]
+
+summary: "一篇小学时看的满分作文，时乃至今，仍觉得惊为天人！" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
+
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: true # 文章内不显示/显示 #
+
+weight: 10 # 置顶 一般置顶 10（同weight参考时间）#
+
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
+---
+
+
+
 > 在这里
+
 向长安，对秋灯，几人老？
 
 这是一抔喧哗了千年的黄土，是十三朝顶礼膜拜的故都。这里秦时的明月正皎洁，汉代的城门正轻启。

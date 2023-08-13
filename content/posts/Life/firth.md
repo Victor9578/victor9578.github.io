@@ -1,29 +1,26 @@
 ---
-title: "Firth"
+title: "Notes | 汉中小随笔"
 date: 2022-09-19T20:48:05+08:00
 draft: false
 tags: ['工作']
-categories: ['post']
+categories: ['posts']
 
-featuredImage: ""
-featuredImagePreview: ""
+summary: "感慨汉中的小生活😛" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: true
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: true # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
+weight: 10 # 置顶 一般置顶 10（同weight参考时间）#
 
-  # ...
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
+
 # 时光笔记_1
 ### 生活小感慨
   快乐的时光总是短暂的，进入了社会的小同志才知道学校的美好时光。那无忧无虑，那轻松惬意，那青春气息。

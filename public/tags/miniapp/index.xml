@@ -9,7 +9,7 @@
       <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 29 Sep 2021 19:53:03 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/miniapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Miniapp</title>
@@ -17,9 +17,8 @@
       <pubDate>Wed, 29 Sep 2021 19:53:03 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/life/miniapp/</guid>
-      <description>miniapp 原网站jt.jaywxl.asia ,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。 现在已经将假条项目迁移至小程序。 可以微信搜索</description>
-      <content:encoded><![CDATA[<hr>
-<h1 id="miniapp">miniapp</h1>
+      <description>XUST 我在校园 请假小程序</description>
+      <content:encoded><![CDATA[<h1 id="miniapp">miniapp</h1>
 <p>原网站<a href="jt.jaywxl.asia">jt.jaywxl.asia</a>
 ,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。</p>
 <hr>
@@ -29,14 +28,14 @@
 </ul>
 <hr>
 <ul>
-<li><figure><a class="lightgallery" href="../../images/jaymini.jpg" title="jpg" data-thumbnail="../../images/jaymini.jpg">
+<li><figure><a class="lightgallery" href="/images/jaymini.jpg" title="jpg" data-thumbnail="/images/jaymini.jpg">
         <img
             class="lazy"
             src="/svg/loading.min.svg"
-            data-src="../../images/jaymini.jpg"
+            data-src="/images/jaymini.jpg"
             loading="lazy"
             title="jpg"
-            alt="../../images/jaymini.jpg" />
+            alt="/images/jaymini.jpg" />
     </a><figcaption class="image-caption">jpg</figcaption>
 </figure>
 </li>

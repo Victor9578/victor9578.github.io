@@ -4,29 +4,23 @@ date: 2022-12-12T18:42:24+08:00
 draft: false
 tags: ['bilibili']
 categories: ['Music']
-description: 关于张悬_我想你要走了
 
-featuredImage: ""
-featuredImagePreview: "https://i0.hdslb.com/bfs/archive/c0db5110d01923b7d2d8e6adf71f54c691bd9f1f.jpg"
+summary: "关于张悬_我想你要走了" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "https://i0.hdslb.com/bfs/archive/c0db5110d01923b7d2d8e6adf71f54c691bd9f1f.jpg@672w_378h_1c_!web-space-upload-video.avif" # 图片链接 #
+    alt: "我想你要走了" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
+weight: 10 # 置顶 一般置顶 10（同weight参考时间）#
 
-  # ...
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
 
-<!--more-->
 
 ***
 
@@ -52,7 +46,7 @@ toc:
 
 ## Part2_情丝绕
 
-##### hahah，有没有想起琅琊榜呢，这可真是太棒了呢
+**hahah，有没有想起琅琊榜呢，这可真是太棒了呢**
 
 去找了张悬这首歌的 吉他谱
 

@@ -5,24 +5,22 @@ draft: false
 tags: ['stu','数据结构','sql']
 categories: ["stu"]
 
-featuredImage: ""
-featuredImagePreview: ""
+summary: "" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: true
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
+weight: false # 置顶 一般置顶 10（同weight参考时间）#
 
-  # ...
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
+---
+
 ---
 ## 01_返回交集
 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如果出现次数不一致，则考虑取较小值）。可以不考虑输出结果的顺序。   

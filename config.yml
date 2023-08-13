@@ -1,11 +1,12 @@
 baseURL: "https://bl.jaywxl.eu.org/"
 title: Jaywxl
-paginate: 10
 theme: PaperMod
 defaultContentLanguage: cn
 languageCode: zh-cn
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
 TimeZone: Asia/Shanghai
+
+paginate: 8
 
 outputs:
     home:
@@ -34,16 +35,16 @@ languages:
             main:
                 - name: Archive
                   url: archives/
-                  weight: 20
+                  weight: 10
                 - name: Search
                   url: search/
-                  weight: 10
+                  weight: 13
                 - name: Tags
                   url: tags/
-                  weight: 10
+                  weight: 12
                 - name: Categories
                   url: categories/
-    #              weight: 13
+                  weight: 11
     #            - name: 友链
     #              url: links/
     #              weight: 4
@@ -77,7 +78,7 @@ params:
     author: Jw_OvO
     # author: ["Me", "You"] # multiple authors
     keywords: ["hugo", "Blog",]
-    
+
     twikoo: 
         version: "1.6.x"
         region: "ap-shanghai"
@@ -97,7 +98,10 @@ params:
     ShowFullTextinRSS: true
     enableimgloop: true
     hideMeta: false
-    ShowToc: true
+
+    ShowToc: true #显示toc目录树 #
+    TocOpen: true # toc目录树展开 #
+    
     comments: true
     hideFooter:  # 使用自定义footer(新增备案号)，隐藏原footer
     katex: false
@@ -123,9 +127,9 @@ params:
             欢迎来到我的站点！😁
     socialIcons:
         - name: email
-          url: "mailto:xx@xx.com"
-        - name: xx
-          url: "xx"
+          url: "mailto:jaywxll@outlook.com"
+        - name: Github
+          url: "https://github.com/Victor9578"
         - name: RsS
           url: "index.xml"
 
@@ -136,7 +140,7 @@ params:
 
     label:
         text: "Jaywxl"
-        icon: /img/avatar.png
+        icon: /images/avatar.png
         iconHeight: 30
 
     # analytics:
@@ -146,11 +150,10 @@ params:
     assets:
         disableHLJS: true
         disableFingerprinting: true
-        favicon: "/favicon/favicon.ico"
+        favicon: "/favicon/favicon-16x16.png"
         favicon16x16: "/favicon/favicon-16x16.png"
         favicon32x32: "/favicon/favicon-32x32.png"
         apple_touch_icon: "/favicon/apple-touch-icon.png"
-        safari_pinned_tab: "/favicon/safari-pinned-tab.svg"
 
     # Verify your site ownership
     analytics: 
@@ -165,7 +168,7 @@ params:
 
     cover:
         hidden: false # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
+        hiddenInList: false # hide on list pages and home
         hiddenInSingle: false # hide on single page
 
     # for search

@@ -27,7 +27,7 @@
     {{- else }}{{/* For absolute urls and external links, no img processing here */}}
         {{- if $addLink }}<a href="{{ (.Params.cover.image) | absURL }}" target="_blank"
             rel="noopener noreferrer">{{ end -}}
-            <img class="lazy" src="{{ $loading.RelPermalink }}"  data-src="{{ (.Params.cover.image) | absURL }}" loading="lazy" alt="{{ $alt }}">
+            <img class="lazy" src="{{ $loading.RelPermalink }}"  data-src="{{ (.Params.cover.image) | absURL }}" loading="lazy" alt="{{ $alt }}" referrerpolicy="no-referrer" />
     {{- end }}
     {{- if $addLink }}</a>{{ end -}}
     {{/*  Display Caption  */}}

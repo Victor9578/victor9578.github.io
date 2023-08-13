@@ -4,26 +4,22 @@ date: 2022-12-15T21:44:43+08:00
 draft: false
 tags: ['sql']
 categories: ['stu']
+
+summary: "" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
+
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
+
+weight: false # 置顶 一般置顶 10（同weight参考时间）#
+
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
 description:
-
-featuredImage: ""
-featuredImagePreview: ""
-
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
-
-toc:
-  enable: true
-  auto: true
-
-  # ...
+---
 ---
 
 <!--more-->

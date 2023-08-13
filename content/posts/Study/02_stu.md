@@ -5,25 +5,25 @@ draft: false
 tags: ['stu','数据结构','sql']
 categories: ["stu"]
 
-featuredImage: ""
-featuredImagePreview: ""
+summary: "" # 文章简介 #
+author: ["Jaywxl"] # 作者 #
 
-hiddenFromHomePage: true
-hiddenFromSearch: false
-twemoji: true
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-rssFullText: false
+cover:
+    image: "" # 图片链接 #
+    alt: "" # 图片名称 #
+    hidden: false # 文章内不显示/显示 #
 
-toc:
-  enable: true
-  auto: true
+weight: false # 置顶 一般置顶 10（同weight参考时间）#
 
-  # ...
+katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #
+# description: "Desc Text." # 单页面标题 #
 ---
+
+
+
+
 ## 01_找出出现一次的元素(reduce)
 给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。  
 

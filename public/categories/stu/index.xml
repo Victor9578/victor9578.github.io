@@ -9,19 +9,72 @@
       <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Aug 2023 21:38:29 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/stu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Miniapp</title>
+      <link>https://bl.jaywxl.eu.org/posts/life/miniapp/</link>
+      <pubDate>Wed, 29 Sep 2021 19:53:03 +0800</pubDate>
+      
+      <guid>https://bl.jaywxl.eu.org/posts/life/miniapp/</guid>
+      <description>XUST 我在校园 请假小程序</description>
+      <content:encoded><![CDATA[<h1 id="miniapp">miniapp</h1>
+<p>原网站<a href="jt.jaywxl.asia">jt.jaywxl.asia</a>
+,因为校园保卫人员职业素养的提升，网站形成的假条已经被废弃。</p>
+<hr>
+<p>现在已经将假条项目迁移至小程序。</p>
+<ul>
+<li>可以微信搜索Jaywxl</li>
+</ul>
+<hr>
+<ul>
+<li><figure><a class="lightgallery" href="/images/jaymini.jpg" title="jpg" data-thumbnail="/images/jaymini.jpg">
+        <img
+            class="lazy"
+            src="/svg/loading.min.svg"
+            data-src="/images/jaymini.jpg"
+            loading="lazy"
+            title="jpg"
+            alt="/images/jaymini.jpg" />
+    </a><figcaption class="image-caption">jpg</figcaption>
+</figure>
+</li>
+</ul>
+<hr>
+<p>本项目所有源码都在GitHub开源(ps:后端还未完成push)
+感谢各位校友的支持，请勿外传，有更好css想法的朋友，可以在下方评论！😘</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Long_ago_compostion</title>
       <link>https://bl.jaywxl.eu.org/posts/life/long_ago_compostion/</link>
       <pubDate>Fri, 11 Aug 2023 21:38:29 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/life/long_ago_compostion/</guid>
-      <description>在这里 向长安，对秋灯，几人老？ 这是一抔喧哗了千年的黄土，是十三朝顶礼膜拜的故都。这里秦时的明月正皎洁，汉代的城门正轻启。 秦始皇在这里挥剑浮云</description>
-      <content:encoded><![CDATA[<blockquote>
-<p>在这里
-向长安，对秋灯，几人老？</p>
+      <description>title: &amp;ldquo;Long_ago_compostion&amp;rdquo; date: 2023-08-11T21:38:29+08:00 draft: false tags: [美文] categories: [stu] summary: &amp;ldquo;一篇小学时看的满分作文，时乃至今，仍觉得惊为天人！&amp;rdquo; # 文章简介 # author: [&amp;ldquo;Jaywxl&amp;rdquo;] # 作者 # cover: image: &amp;quot;&amp;quot; # 图</description>
+      <content:encoded><![CDATA[<hr>
+<p>title: &ldquo;Long_ago_compostion&rdquo;
+date: 2023-08-11T21:38:29+08:00
+draft: false
+tags: [美文]
+categories: [stu]</p>
+<p>summary: &ldquo;一篇小学时看的满分作文，时乃至今，仍觉得惊为天人！&rdquo; # 文章简介 #
+author: [&ldquo;Jaywxl&rdquo;] # 作者 #</p>
+<p>cover:
+image: &quot;&quot; # 图片链接 #
+alt: &quot;&quot; # 图片名称 #
+hidden: true # 文章内不显示/显示 #</p>
+<p>weight: 10 # 置顶 一般置顶 10（同weight参考时间）#</p>
+<p>katex: false # 数学公式 #
+mermaid: true # 流程图 #
+hidemeta: false # 隐藏页面元素如：作者、时间等 #</p>
+<h1 id="description-desc-text--单页面标题">description: &ldquo;Desc Text.&rdquo; # 单页面标题</h1>
+<hr>
+<blockquote>
+<p>在这里</p>
 </blockquote>
+<p>向长安，对秋灯，几人老？</p>
 <p>这是一抔喧哗了千年的黄土，是十三朝顶礼膜拜的故都。这里秦时的明月正皎洁，汉代的城门正轻启。</p>
 <p>秦始皇在这里挥剑浮云，东指六国，逐鹿中原；汉武帝在这里横剑漠北，踏碎匈奴铁骑的狼烟；张骞在这里拜别故里，逶迤西行，踩出丝绸之路曲折的痕迹；玄奘在这里打点行装，把大唐盛世的种子播撒向繁花如锦的天竺。无数人怀揣着无数瑰丽的梦，把鲜活的生命化作丹砂，镌刻在汗青竹简里。这里，万世流芳。</p>
 <p>骊山的草木见证着，周幽烽火在这里戏取各路诸侯，褒姒倾国倾城的微笑揭开春秋乱世的序幕；大明宫殿前的麒麟目睹了，牡丹在这里不畏武皇淫威的铁骨铮铮，翩跹至洛阳而名动天下；华清池的海棠汤倒映过，杨贵妃在这里霓裳羽衣轻柔的魅影，断送一代盛世璀璨的华章；摆着酒座亭台楼阁回忆着，诗仙李白把酒当歌，绣口吐出半个盛唐的飘逸与洒脱。这是历史最绚丽的舞台，动人的故事演绎出一幕幕惊心动魄的诗行。这里，百转千回。</p>
@@ -38,8 +91,9 @@
       <pubDate>Thu, 15 Dec 2022 21:44:43 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/15_stu/</guid>
-      <description></description>
-      <content:encoded><![CDATA[<h2 id="sql_rank函数">sql_Rank()函数</h2>
+      <description>&lt;hr&gt;</description>
+      <content:encoded><![CDATA[<hr>
+<h2 id="sql_rank函数">sql_Rank()函数</h2>
 <p>编写 SQL 查询对分数进行排序。排名按以下规则计算:</p>
 <p>分数应按从高到低排列。
 如果两个分数相等，那么两个分数的排名应该相同。
@@ -132,7 +186,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">#</span><span class="w"> </span><span class="k">Write</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="k">statement</span><span class="w"> </span><span class="n">below</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="n">dense_rank</span><span class="p">()</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="p">(</span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;rank&#39;</span><span class="w">  </span><span class="o">#</span><span class="err">这个</span><span class="n">rank之所以要加引号</span><span class="err">，因为</span><span class="n">rank本身是个函数</span><span class="err">，直接写</span><span class="n">rank会报错</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="n">dense_rank</span><span class="p">()</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="p">(</span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;rank&#39;</span><span class="w">  </span><span class="o">#</span><span class="err">这个</span><span class="n">rank</span><span class="err">之所以要加引号，因为</span><span class="n">rank</span><span class="err">本身是个函数，直接写</span><span class="n">rank</span><span class="err">会报错</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">scores</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 异或这种count1前面的数据
@@ -151,8 +205,9 @@
       <pubDate>Mon, 12 Dec 2022 21:43:13 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/14_stu/</guid>
-      <description></description>
-      <content:encoded><![CDATA[<h2 id="数组之求和为k的连续子数组数量">数组之求和为k的连续子数组数量</h2>
+      <description>&lt;hr&gt;</description>
+      <content:encoded><![CDATA[<hr>
+<h2 id="数组之求和为k的连续子数组数量">数组之求和为k的连续子数组数量</h2>
 <p>给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的连续子数组的个数 。</p>
 <p>示例 1：</p>
 <p>输入：nums = [1,1,1], k = 2
@@ -231,8 +286,9 @@
       <pubDate>Sun, 11 Dec 2022 23:34:11 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/13_stu/</guid>
-      <description></description>
-      <content:encoded><![CDATA[<p>写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：</p>
+      <description>&lt;hr&gt;</description>
+      <content:encoded><![CDATA[<hr>
+<p>写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：</p>
 <p>每行的元素从左到右升序排列。</p>
 <p>每列的元素从上到下升序排列。
  
@@ -331,8 +387,9 @@
       <pubDate>Wed, 07 Dec 2022 17:10:59 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/12_stu/</guid>
-      <description></description>
-      <content:encoded><![CDATA[<h2 id="01_二叉搜索树公共祖先">01_二叉搜索树公共祖先</h2>
+      <description>&lt;hr&gt;</description>
+      <content:encoded><![CDATA[<hr>
+<h2 id="01_二叉搜索树公共祖先">01_二叉搜索树公共祖先</h2>
 <p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。</p>
 <p>百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”</p>
 <p>例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
@@ -408,7 +465,8 @@
       
       <guid>https://bl.jaywxl.eu.org/posts/study/11_stu/</guid>
       <description>动态规划之最少趟数</description>
-      <content:encoded><![CDATA[<div class="details admonition note open">
+      <content:encoded><![CDATA[<hr>
+<div class="details admonition note open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-pencil-alt fa-fw"></i>Target<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
@@ -688,7 +746,8 @@
       
       <guid>https://bl.jaywxl.eu.org/posts/study/06_stu/</guid>
       <description>01_adddate 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 输入： Weather 表： +----+------------+-------------+ | id | recordDate | Temperature | +----+------------+-------------+ | 1 | 2015-01-01 | 10 | | 2 | 2015-01-02 | 25 | | 3 | 2015-01-03 | 20 | | 4 | 2015-01-04 | 30 | +----+------------+-------------+ 输</description>
-      <content:encoded><![CDATA[<h2 id="01_adddate">01_adddate</h2>
+      <content:encoded><![CDATA[<hr>
+<h2 id="01_adddate">01_adddate</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -798,8 +857,10 @@
       <pubDate>Mon, 28 Nov 2022 16:55:58 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/05_stu/</guid>
-      <description>01_sql 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 给定一个表 tree，id 是树节点的编号， p_id 是它父节点的 id 。 +----+------+ | id | p_id | +----+------+ |</description>
-      <content:encoded><![CDATA[<h2 id="01_sql">01_sql</h2>
+      <description>&amp;hellip; 01_sql 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 给定一个表 tree，id 是树节点的编号， p_id 是它父节点的 id 。 +----+------+ | id | p_id | +----+------+</description>
+      <content:encoded><![CDATA[<h1 id="heading">&hellip;</h1>
+<hr>
+<h2 id="01_sql">01_sql</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1178,7 +1239,8 @@
       
       <guid>https://bl.jaywxl.eu.org/posts/study/04_stu/</guid>
       <description>01_数组切片分组 1 2 3 4 5 6 7 8 9 10 11 12 mat = [[1,2],[3,4],[5,6]] r,c = 2,3 ans = [[0]*c for _ in range(r)] a = [] class Solution: def matrixReshape(self, mat: List[List[int]], r: int, c: int) -&amp;gt; List[List[int]]: if len(mat)*len(mat[0]) == r*c : for i in mat: a +=i return [a[i:i + c] for i in range(0, len(a), c)]</description>
-      <content:encoded><![CDATA[<h2 id="01_数组切片分组">01_数组切片分组</h2>
+      <content:encoded><![CDATA[<hr>
+<h2 id="01_数组切片分组">01_数组切片分组</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1280,7 +1342,8 @@
       
       <guid>https://bl.jaywxl.eu.org/posts/study/03_stu/</guid>
       <description>01_返回交集 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如</description>
-      <content:encoded><![CDATA[<h2 id="01_返回交集">01_返回交集</h2>
+      <content:encoded><![CDATA[<hr>
+<h2 id="01_返回交集">01_返回交集</h2>
 <p>给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如果出现次数不一致，则考虑取较小值）。可以不考虑输出结果的顺序。 </p>
 <p>示例 1：</p>
 <p>输入：nums1 = [1,2,2,1], nums2 = [2,2]
@@ -1396,7 +1459,7 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">patient_id</span><span class="p">,</span><span class="n">patient_name</span><span class="p">,</span><span class="n">conditions</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">PAtients</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="n">regexp</span><span class="w"> </span><span class="s1">&#39;^DIAB1|\\sDIAB1&#39;</span><span class="p">;</span><span class="w"> </span><span class="o">#</span><span class="w"> </span><span class="err">正则表达式</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;DIAB1%&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;% DIAB1%&#39;</span><span class="w"> </span><span class="o">#</span><span class="n">like的匹配得有百分号</span><span class="err">（类似于</span><span class="o">*</span><span class="err">）</span><span class="w"> </span><span class="err">否则该语句等同于</span><span class="o">=</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;DIAB1%&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;% DIAB1%&#39;</span><span class="w"> </span><span class="o">#</span><span class="n">like</span><span class="err">的匹配得有百分号（类似于</span><span class="o">*</span><span class="err">）</span><span class="w"> </span><span class="err">否则该语句等同于</span><span class="o">=</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><!--

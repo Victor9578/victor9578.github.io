@@ -9,7 +9,7 @@
       <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Aug 2023 21:38:29 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>stu</title>
@@ -72,9 +72,19 @@
     </item>
     
     <item>
+      <title>posts</title>
+      <link>https://bl.jaywxl.eu.org/categories/posts/</link>
+      <pubDate>Mon, 19 Sep 2022 20:48:05 +0800</pubDate>
+      
+      <guid>https://bl.jaywxl.eu.org/categories/posts/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>post</title>
       <link>https://bl.jaywxl.eu.org/categories/post/</link>
-      <pubDate>Mon, 19 Sep 2022 20:48:05 +0800</pubDate>
+      <pubDate>Wed, 17 Feb 2021 13:31:44 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/categories/post/</guid>
       <description></description>

@@ -9,7 +9,7 @@
       <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cn</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 11 Dec 2022 23:34:11 +0800</lastBuildDate><atom:link href="https://bl.jaywxl.eu.org/tags/z%E5%AD%97%E5%9E%8B%E6%90%9C%E7%B4%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>13_stu</title>
@@ -17,8 +17,9 @@
       <pubDate>Sun, 11 Dec 2022 23:34:11 +0800</pubDate>
       
       <guid>https://bl.jaywxl.eu.org/posts/study/13_stu/</guid>
-      <description></description>
-      <content:encoded><![CDATA[<p>写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：</p>
+      <description>&lt;hr&gt;</description>
+      <content:encoded><![CDATA[<hr>
+<p>写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：</p>
 <p>每行的元素从左到右升序排列。</p>
 <p>每列的元素从上到下升序排列。
  
