@@ -1,5 +1,5 @@
 ---
-title: "Music_我想你要走了"
+title: "Music | 我想你要走了"
 date: 2022-12-12T18:42:24+08:00
 draft: false
 tags: ['bilibili']

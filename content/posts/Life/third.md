@@ -13,7 +13,7 @@ cover:
     alt: "" # 图片名称 #
     hidden: true # 文章内不显示/显示 #
 
-weight: false # 置顶 一般置顶 10（同weight参考时间）#
+weight: 10 # 置顶 一般置顶 10（同weight参考时间）#
 
 katex: false # 数学公式 #
 mermaid: true # 流程图 #
