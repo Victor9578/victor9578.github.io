@@ -31,7 +31,7 @@ hidemeta: false # 隐藏页面元素如：作者、时间等 #
 
 * 可以微信搜索Jaywxl
 ---
-* ![jpg](/images/jaymini.jpg)
+* ![jpg](/images/jaymini.jpg=200×)
   
 
 ---
