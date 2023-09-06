@@ -56,7 +56,8 @@ hidemeta: false # 隐藏页面元素如：作者、时间等 #
 
 ***
 
-![吉他谱](https://m.360buyimg.com/babel/jfs/t1/161698/8/33617/90581/63976503E5ef0a9f0/9d4441bc33d32696.jpg)
+<img src="https://m.360buyimg.com/babel/jfs/t1/161698/8/33617/90581/63976503E5ef0a9f0/9d4441bc33d32696.jpg">
+![吉他谱](
 
 ## Part3_
 

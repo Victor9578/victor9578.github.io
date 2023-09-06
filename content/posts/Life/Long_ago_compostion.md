@@ -39,5 +39,5 @@ hidemeta: false # 隐藏页面元素如：作者、时间等 #
 
 这里，长安。
 
-<img src="/img_ankang/20230805_193352.avif" width="50%" title="安康汉江_1">
+<img src="/img_ankang/20230805_193352.avif" title="安康汉江_1">
 
