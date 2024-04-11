@@ -6,4 +6,4 @@
 
 ---
 
-[😂我的Blog](https://bl.jaywxl.eu.org)
+[😂我的Blog](https://www.jaywxl.eu.org)
