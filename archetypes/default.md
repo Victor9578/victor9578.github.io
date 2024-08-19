@@ -13,7 +13,7 @@ cover:
     alt: "" # 图片名称 #
     hidden: false # 文章内不显示/显示 #
 
-weight: false # 置顶 一般置顶 10（同weight参考时间）#
+weight: 10 # 置顶 默认10首页显示，位于firstpost、影视收藏之后，其余weight10按照时间顺序排布#
 
 katex: false # 数学公式 #
 mermaid: true # 流程图 #
