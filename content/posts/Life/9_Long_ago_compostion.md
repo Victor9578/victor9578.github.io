@@ -2,8 +2,8 @@
 title: "Notes | 一篇满分作文 --《在这里》"
 date: 2023-08-11T21:38:29+08:00
 draft: false
-tags: [美文]
-categories: [stu]
+tags: ['美文']
+categories: ['Notes']
 
 summary: '一篇小学时看的满分作文，时乃至今，仍觉得惊为天人！<br>向长安，对秋灯，几人老'# 文章简介 #
 author: ["Jaywxl"] # 作者 #

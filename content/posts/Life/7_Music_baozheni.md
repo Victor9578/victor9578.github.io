@@ -3,7 +3,7 @@ title: "Music | 抱着你"
 date: 2023-02-01T21:58:28+08:00
 draft: false
 tags: ['bilibili']
-categories: ['Music']
+categories: ['Notes']
 
 summary: "很久没写了，暂时搁置了转行的想法，回听起这首《抱着你》，提升不会放下，路也会沿着你的脚步想你铺来" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

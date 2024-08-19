@@ -2,8 +2,8 @@
 title: "10_stu"
 date: 2022-12-03T15:39:25+08:00
 draft: false
-tags: ['二叉树']
-categories: ['数据结构']
+tags: ['二叉树','数据结构']
+categories: ['stu']
 
 summary: "" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

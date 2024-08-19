@@ -3,7 +3,7 @@ title: "06_stu"
 date: 2022-11-29T14:07:55+08:00
 draft: false
 tags: ['sql']
-categories: ["stu"]
+categories: ['stu']
 
 summary: "" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

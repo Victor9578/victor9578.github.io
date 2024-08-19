@@ -3,7 +3,7 @@ title: "XUST 自动打卡"
 date: 2021-02-17T13:31:44+08:00
 draft: false
 tags: ['xust','打卡']
-categories: ['post']
+categories: ['Notes']
 
 summary: "XUST 疫情期间 自动打卡" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

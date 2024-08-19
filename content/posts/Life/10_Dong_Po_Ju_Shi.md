@@ -2,8 +2,8 @@
 title: "Notes | 读《苏轼传》感" # 日期 #
 date: 2023-11-13T18:08:23+08:00 # 日期 #
 draft: false # 草稿与否 #
-tags: [] # 标签 #
-categories: [] # 分类 #
+tags: ['感悟'] # 标签 #
+categories: ['Notes'] # 分类 #
 
 summary: "" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

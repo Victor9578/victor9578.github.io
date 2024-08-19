@@ -2,8 +2,8 @@
 title: "Miniapp"
 date: 2021-09-29T19:53:03+08:00
 draft: false
-tags: [miniapp]
-categories: [stu]
+tags: ['miniapp','xust']
+categories: ['Notes']
 
 summary: "XUST 我在校园 请假小程序" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

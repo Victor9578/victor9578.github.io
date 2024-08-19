@@ -2,8 +2,8 @@
 title: "Notes | 故地重游_汉中行" # 日期 #
 date: 2023-08-10T12:22:29+08:00 # 日期 #
 draft: false # 草稿与否 #
-tags: [Hanzhong] # 标签 #
-categories: [Life] # 分类 #
+tags: ['Hanzhong','旅行'] # 标签 #
+categories: ['Notes'] # 分类 #
 
 summary: "故地重游，在人生的十字路口来到汉中，心里很是开心。这个地方还留存着步入社会的第一个脚印，今天走过了了旧人旧事老地方，交织着的回忆与现况，潸然泪下，以记此文" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

@@ -3,7 +3,7 @@ title: "First Post"
 date: 2021-02-05T21:18:46+08:00
 draft: false
 tags: ['blog']
-categories: ['post']
+categories: ['Notes']
 
 summary: "Say Hello!🤩" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

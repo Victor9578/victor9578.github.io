@@ -3,7 +3,7 @@ title: "Notes | 汉中小随笔"
 date: 2022-09-19T20:48:05+08:00
 draft: false
 tags: ['工作']
-categories: ['posts']
+categories: ['Notes']
 
 summary: "感慨汉中的小生活😛" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

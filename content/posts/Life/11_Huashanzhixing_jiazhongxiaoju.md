@@ -2,8 +2,8 @@
 title: "Notes | 华山旅游&终南山&近期小酌小聚" # 日期 #
 date: 2024-04-12T15:15:53+08:00 # 日期 #
 draft: false # 草稿与否 #
-tags: [] # 标签 #
-categories: [] # 分类 #
+tags: ['旅行'] # 标签 #
+categories: ['Notes'] # 分类 #
 
 summary: "" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

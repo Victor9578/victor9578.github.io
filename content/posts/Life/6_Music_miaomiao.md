@@ -3,7 +3,7 @@ title: "Music | 我想你要走了"
 date: 2022-12-12T18:42:24+08:00
 draft: false
 tags: ['bilibili']
-categories: ['Music']
+categories: ['Notes']
 
 summary: "关于张悬_我想你要走了" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

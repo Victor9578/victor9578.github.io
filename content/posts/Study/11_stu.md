@@ -3,7 +3,7 @@ title: "11_stu"
 date: 2022-12-05T20:22:14+08:00
 draft: false
 tags: ["动态规划"]
-categories: ["stu"]
+categories: ['stu']
 
 summary: "" # 文章简介 #
 author: ["Jaywxl"] # 作者 #

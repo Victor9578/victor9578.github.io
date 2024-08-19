@@ -3,7 +3,7 @@ title: "影视收藏"
 date: 2021-02-05T21:56:57+08:00
 draft: false
 tags: ['影视站点']
-categories: ['post']
+categories: ['Notes']
 
 summary: "搜刮的一些在线视频站点。" # 文章简介 #
 author: ["Jaywxl"] # 作者 #
