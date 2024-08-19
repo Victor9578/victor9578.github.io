@@ -101,7 +101,7 @@ params:
 
     ShowToc: true #显示toc目录树 #
     TocOpen: true # toc目录树展开 #
-    
+
     comments: false
     hideFooter:  # 使用自定义footer(新增备案号)，隐藏原footer
     katex: false
