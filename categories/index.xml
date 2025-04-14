@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Jaywxl</title>
+    <link>https://www.jaywxl.eu.org/categories/</link>
+    <description>Recent content in Categories on Jaywxl</description>
+    <image>
+      <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
+      <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Mon, 14 Apr 2025 16:32:59 +0800</lastBuildDate><atom:link href="https://www.jaywxl.eu.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes</title>
+      <link>https://www.jaywxl.eu.org/categories/notes/</link>
+      <pubDate>Mon, 14 Apr 2025 16:32:59 +0800</pubDate>
+      
+      <guid>https://www.jaywxl.eu.org/categories/notes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>stu</title>
+      <link>https://www.jaywxl.eu.org/categories/stu/</link>
+      <pubDate>Thu, 15 Dec 2022 21:44:43 +0800</pubDate>
+      
+      <guid>https://www.jaywxl.eu.org/categories/stu/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

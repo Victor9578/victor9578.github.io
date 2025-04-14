@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>前缀和法 on Jaywxl</title>
+    <link>https://www.jaywxl.eu.org/tags/%E5%89%8D%E7%BC%80%E5%92%8C%E6%B3%95/</link>
+    <description>Recent content in 前缀和法 on Jaywxl</description>
+    <image>
+      <url>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</url>
+      <link>https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <lastBuildDate>Mon, 12 Dec 2022 21:43:13 +0800</lastBuildDate><atom:link href="https://www.jaywxl.eu.org/tags/%E5%89%8D%E7%BC%80%E5%92%8C%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>14_stu</title>
+      <link>https://www.jaywxl.eu.org/posts/study/14_stu/</link>
+      <pubDate>Mon, 12 Dec 2022 21:43:13 +0800</pubDate>
+      
+      <guid>https://www.jaywxl.eu.org/posts/study/14_stu/</guid>
+      <description>数组之求和为k的连续子数组数量 给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的连续子数组的个数 。 示例 1： 输入：nums = [1,1,1], k =</description>
+      <content:encoded><![CDATA[<hr>
+<h2 id="数组之求和为k的连续子数组数量">数组之求和为k的连续子数组数量</h2>
+<p>给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的连续子数组的个数 。</p>
+<p>示例 1：</p>
+<p>输入：nums = [1,1,1], k = 2
+输出：2</p>
+<p>示例 2：</p>
+<p>输入：nums = [1,2,3], k = 3
+输出：2</p>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：https://leetcode.cn/problems/subarray-sum-equals-k</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<hr>
+<blockquote>
+<p>使用的原理就是 presum-k 若在 之前哈希表中的 presum 出现过 那么 必定有连续的数组和为k<br>
+因为之前统计的presum为一段连续数组，现如今的presum同为连续数组，两个连续数组相减，和为k的数组也必为连续数组<br>
+若presum在哈希表中不唯一 表示连续数组中出现了和为0的子数组。</p>
+</blockquote>
+<p><figure><a class="lightgallery" href="https://pic.leetcode-cn.com/1650818225-XIUNgx-image.png" title="111" data-thumbnail="https://pic.leetcode-cn.com/1650818225-XIUNgx-image.png">
+        <img
+            class="lazy"
+            src="/svg/loading.min.svg"
+            data-src="https://pic.leetcode-cn.com/1650818225-XIUNgx-image.png"
+            loading="lazy"
+            title="111"
+            alt="https://pic.leetcode-cn.com/1650818225-XIUNgx-image.png" />
+    </a><figcaption class="image-caption">111</figcaption>
+</figure>
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">subarraySum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">prehash</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">prehash</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">preSum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">preSum</span> <span class="o">+=</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">preSum</span> <span class="o">-</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">prehash</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">count</span> <span class="o">+=</span> <span class="n">prehash</span><span class="p">[</span><span class="n">preSum</span> <span class="o">-</span> <span class="n">k</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">preSum</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">prehash</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">prehash</span><span class="p">[</span><span class="n">preSum</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">prehash</span><span class="p">[</span><span class="n">preSum</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">count</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
