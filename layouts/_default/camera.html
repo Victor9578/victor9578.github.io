@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default " en" }}">
+
 <head>
   <!-- 引入主题头部 (PaperMod 的 CSS 变量都在这里面) -->
   {{ partial "head.html" . }}
@@ -18,13 +19,15 @@
     /* 定义我们自己需要的变量，默认跟随主题变量 */
     :root {
       --gallery-gap: 4px;
-      --gallery-header-bg: rgba(255, 255, 255, 0.95); /* 浅色模式吸顶条 */
+      --gallery-header-bg: rgba(255, 255, 255, 0.95);
+      /* 浅色模式吸顶条 */
       --gallery-border: rgba(0, 0, 0, 0.05);
     }
 
     /* ★★★ 关键：当 body 有 dark 类时（PaperMod 暗黑模式激活） ★★★ */
     body.dark {
-      --gallery-header-bg: rgba(29, 30, 32, 0.95); /* 深色模式吸顶条 (PaperMod 深灰) */
+      --gallery-header-bg: rgba(29, 30, 32, 0.95);
+      /* 深色模式吸顶条 (PaperMod 深灰) */
       --gallery-border: rgba(255, 255, 255, 0.1);
     }
 
@@ -32,7 +35,7 @@
     body {
       overflow-x: hidden;
       /* 使用主题变量，这样切换按钮一按，背景自动变 */
-      background-color: var(--theme) !important; 
+      background-color: var(--theme) !important;
       color: var(--primary) !important;
       padding-bottom: 50px;
     }
@@ -40,7 +43,8 @@
     /* 修复宽度问题：恢复你之前的计算公式 */
     #gallery-root {
       margin: 0 auto;
-      padding: 0; /* 既然计算公式里含了 gap，这里 padding 可以去掉或微调 */
+      padding: 0;
+      /* 既然计算公式里含了 gap，这里 padding 可以去掉或微调 */
       width: 100%;
       /* 你的自定义宽度公式 */
       max-width: calc(var(--nav-width) + var(--gap) * 2);
@@ -55,11 +59,12 @@
     .month-header {
       font-size: 1.5rem;
       font-weight: 400;
-      color: var(--primary); /* 跟随主题文字色 */
+      color: var(--primary);
+      /* 跟随主题文字色 */
       padding: 24px 8px 16px;
       position: sticky;
       top: 0;
-      
+
       /* 使用我们上面适配好的背景变量 */
       background-color: var(--gallery-header-bg);
       backdrop-filter: blur(10px);
@@ -75,7 +80,7 @@
       /* 使用负 margin 抵消间距 */
       margin: calc(var(--gallery-gap) * -1);
     }
-    
+
     .photo-grid::after {
       content: '';
       flex-grow: 999999999;
@@ -90,14 +95,14 @@
       cursor: zoom-in;
       border-radius: 4px;
       /* 稍微弱化阴影，PaperMod 风格比较扁平 */
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .photo-item:hover {
       transform: translateY(-2px);
       z-index: 2;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .photo-placeholder {
@@ -107,70 +112,121 @@
 
     .photo-item img {
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       opacity: 0;
       transition: opacity 0.4s ease-out;
     }
 
-    .photo-item img.loaded { opacity: 1; }
+    .photo-item img.loaded {
+      opacity: 1;
+    }
 
     /* ================== 4. 加载与哨兵 ================== */
     #load-sentinel {
       text-align: center;
       padding: 40px;
-      color: var(--secondary); /* 使用主题次级文字色 */
+      color: var(--secondary);
+      /* 使用主题次级文字色 */
       font-size: 14px;
     }
+
     .spinner {
       display: inline-block;
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       border: 3px solid rgba(128, 128, 128, 0.2);
       border-radius: 50%;
       border-top-color: var(--primary);
       animation: spin 1s ease-in-out infinite;
       margin-bottom: 8px;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     /* ================== 5. Lightbox ================== */
     #image-viewer {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        background-color: rgba(0,0,0,0.95);
-        backdrop-filter: blur(5px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(5px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
-    #image-viewer.active { display: flex; opacity: 1; }
+
+    #image-viewer.active {
+      display: flex;
+      opacity: 1;
+    }
+
     #full-image {
-        max-width: 95%; max-height: 95%;
-        object-fit: contain;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
+
     #viewer-close {
-        position: absolute; top: 30px; right: 40px;
-        color: #fff; font-size: 40px; font-weight: bold;
-        cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
-    #viewer-loading { position: absolute; color: #fff; }
+
+    #viewer-loading {
+      position: absolute;
+      color: #fff;
+    }
 
     @media (max-width: 600px) {
-      .month-header { font-size: 1.4rem; padding: 15px 5px; }
-      .photo-item { margin: 2px; }
-      .photo-grid { margin: -2px; }
+      .month-header {
+        font-size: 1.4rem;
+        padding: 15px 5px;
+      }
+
+      .photo-item {
+        margin: 2px;
+      }
+
+      .photo-grid {
+        margin: -2px;
+      }
     }
   </style>
 </head>
 
 <!-- 给 body 加 id="top"，让回顶按钮生效 -->
+
 <body class="list" id="top">
 
   <!-- 导航栏 -->
@@ -187,9 +243,9 @@
 
   <!-- Lightbox -->
   <div id="image-viewer">
-      <span id="viewer-close">&times;</span>
-      <div id="viewer-loading" class="spinner" style="border-top-color: #fff;"></div>
-      <img id="full-image">
+    <span id="viewer-close">&times;</span>
+    <div id="viewer-loading" class="spinner" style="border-top-color: #fff;"></div>
+    <img id="full-image">
   </div>
 
   <!-- 页脚 (PaperMod 的回到顶部按钮 top-link 在这里) -->
@@ -198,69 +254,40 @@
   <!-- JS 逻辑 -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      
-      // ================= A. 激活 PaperMod 自带的 Top-Link =================
-      const myTopLink = document.getElementById('top-link');
-      if (myTopLink) {
-        // 手动控制显示隐藏，防止被其他 JS 覆盖
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-                myTopLink.style.visibility = "visible";
-                myTopLink.style.opacity = "1";
-            } else {
-                myTopLink.style.visibility = "hidden";
-                myTopLink.style.opacity = "0";
-            }
-        });
-        // 点击平滑回顶
-        myTopLink.onclick = function (e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-      }
-
-      // ================= B. 相册逻辑 =================
+      // ================= 配置区域 =================
       const config = {
-        host: "http://107.175.6.242:8084",
+        // ★ 注意：去掉末尾的斜杠 /，防止拼接成 //api/fs/list
+        host: "https://alist.jwxl.workers.dev",
         path: "/Camera",
         baseHeight: 220,
-        targetThumbSize: 800,
-        pageSize: 50
+        targethdThumbSize: 600,  // 列表视图分辨率
+        targetudThumbSize: 1600, // 大图预览分辨率
+        pageSize: 30
       };
 
       let currentPage = 1;
       let isLoading = false;
       let hasMore = true;
-      
+
       const galleryRoot = document.getElementById('gallery-root');
       const sentinel = document.getElementById('load-sentinel');
       const loadingText = document.getElementById('loading-text');
       const spinner = document.getElementById('loading-spinner');
-      
-      // Lightbox
       const viewer = document.getElementById('image-viewer');
       const fullImage = document.getElementById('full-image');
       const viewerLoading = document.getElementById('viewer-loading');
       const viewerClose = document.getElementById('viewer-close');
-
-      function getImageDimensions(url) {
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = url;
-          img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
-          img.onerror = () => resolve({ width: 400, height: 300 });
-        });
-      }
+      const monthGridCache = new Map();
 
       function getDateLabel(isoDateString) {
         if (!isoDateString) return "未知日期";
         const date = new Date(isoDateString);
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        return `${year}/${month}`;
+        return `${date.getFullYear()}/${date.getMonth() + 1}`;
       }
 
       function getMonthGrid(dateLabel) {
+        if (monthGridCache.has(dateLabel)) return monthGridCache.get(dateLabel);
+
         const id = 'month-' + dateLabel.replace(/[\s年月]/g, '-');
         let section = document.getElementById(id);
         if (!section) {
@@ -270,33 +297,60 @@
           section.innerHTML = `<div class="month-header">${dateLabel}</div><div class="photo-grid"></div>`;
           galleryRoot.appendChild(section);
         }
-        return section.querySelector('.photo-grid');
+        const grid = section.querySelector('.photo-grid');
+        monthGridCache.set(dateLabel, grid);
+        return grid;
       }
 
-      // 打开 Lightbox
-      function openLightbox(url) {
-          viewer.classList.add('active');
-          fullImage.style.display = 'none';
-          viewerLoading.style.display = 'block';
-          document.body.style.overflow = 'hidden'; // 禁止滚动
-          
-          fullImage.src = url;
-          fullImage.onload = () => {
-              viewerLoading.style.display = 'none';
-              fullImage.style.display = 'block';
-          };
-      }
+      // ★ 核心修复：处理单张图片
+      async function processAndRenderImage(file) {
+        // 1. 初始化变量 (默认用原版缩略图)
+        let hdThumbUrl = file.thumb;
+        let udThumbUrl = file.thumb;
 
-      function closeLightbox() {
-          viewer.classList.remove('active');
-          fullImage.src = ''; 
-          document.body.style.overflow = 'auto';
+        // 2. 如果是微软链接，则进行高清替换
+        if (file.thumb && file.thumb.includes('width=') && file.thumb.includes('height=')) {
+          hdThumbUrl = file.thumb.replace(/width=\d+/, `width=${config.targethdThumbSize}`)
+            .replace(/height=\d+/, `height=${config.targethdThumbSize}`);
+
+          udThumbUrl = file.thumb.replace(/width=\d+/, `width=${config.targetudThumbSize}`)
+            .replace(/height=\d+/, `height=${config.targetudThumbSize}`);
+        }
+
+        // 3. 获取尺寸
+        let dims = { width: 400, height: 300 };
+        try {
+          dims = await new Promise((resolve) => {
+            const img = new Image();
+            img.src = file.thumb; // 用原版小图测算，速度快
+            img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+            img.onerror = () => resolve({ width: 400, height: 300 });
+          });
+        } catch (e) { }
+
+        // 4. 渲染
+        const dateLabel = getDateLabel(file.modified);
+        const grid = getMonthGrid(dateLabel);
+        const flexWidth = dims.width * config.baseHeight / dims.height;
+        const paddingBottom = (dims.height / dims.width) * 100;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'photo-item';
+        itemDiv.style.width = `${flexWidth}px`;
+        itemDiv.style.flexGrow = flexWidth;
+
+        itemDiv.innerHTML = `
+          <div class="photo-placeholder" style="padding-bottom: ${paddingBottom}%;"></div>
+          <img src="${hdThumbUrl}"
+            loading="lazy"
+            alt="${file.name}"
+            onload="this.classList.add('loaded')"
+            onerror="this.style.display='none'">
+        `;
+
+        itemDiv.onclick = () => openLightbox(udThumbUrl);
+        grid.appendChild(itemDiv);
       }
-      
-      viewerClose.onclick = closeLightbox;
-      viewer.onclick = (e) => {
-          if (e.target === viewer) closeLightbox();
-      };
 
       async function loadNextPage() {
         if (isLoading || !hasMore) return;
@@ -316,6 +370,13 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(requestData)
           });
+
+          // ★ 错误捕捉：如果 Worker 还是返回 HTML，这里会报错
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.indexOf("application/json") === -1) {
+            throw new Error("服务器返回了非 JSON 数据，可能是 Alist 页面 HTML。请检查 Worker 配置。");
+          }
+
           const result = await response.json();
 
           if (result.code === 200 && result.data.content) {
@@ -328,85 +389,56 @@
             }
 
             const images = files.filter(file => file.type !== 1 && file.thumb);
-
             if (images.length > 0) {
               images.sort((a, b) => new Date(b.modified) - new Date(a.modified));
-
-              const processTasks = images.map(async file => {
-                let hdThumbUrl = file.thumb;
-                if (hdThumbUrl.includes('width=') && hdThumbUrl.includes('height=')) {
-                  hdThumbUrl = hdThumbUrl.replace(/width=\d+/, `width=${config.targetThumbSize}`)
-                    .replace(/height=\d+/, `height=${config.targetThumbSize}`);
-                }
-                const dims = await getImageDimensions(file.thumb);
-                return {
-                  fileData: file,
-                  width: dims.width,
-                  height: dims.height,
-                  displayUrl: hdThumbUrl,
-                  dateLabel: getDateLabel(file.modified)
-                };
-              });
-
-              const processedImages = await Promise.all(processTasks);
-
-              processedImages.forEach(img => {
-                const grid = getMonthGrid(img.dateLabel);
-                const flexWidth = img.width * config.baseHeight / img.height;
-                const paddingBottom = (img.height / img.width) * 100;
-
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'photo-item';
-                itemDiv.style.width = `${flexWidth}px`;
-                itemDiv.style.flexGrow = flexWidth;
-
-                const rawUrl = `${config.host}/d${config.path}/${encodeURIComponent(img.fileData.name)}`;
-
-                itemDiv.innerHTML = `
-                  <div class="photo-placeholder" style="padding-bottom: ${paddingBottom}%;"></div>
-                  <img src="${img.displayUrl}" 
-                       loading="lazy" 
-                       alt="${img.fileData.name}" 
-                       onload="this.classList.add('loaded')"
-                       onerror="this.style.display='none'">
-                `;
-
-                itemDiv.onclick = () => openLightbox(rawUrl);
-                grid.appendChild(itemDiv);
-              });
-
+              await Promise.all(images.map(file => processAndRenderImage(file)));
               currentPage++;
-            } else if (hasMore) {
-              isLoading = false;
-              loadNextPage();
-              return;
+            } else {
+              if (hasMore) {
+                currentPage++;
+                setTimeout(() => { isLoading = false; loadNextPage(); }, 10);
+                return;
+              }
             }
           } else {
             hasMore = false;
             spinner.style.display = 'none';
-            loadingText.innerText = result.message || "加载失败";
+            loadingText.innerText = "加载完毕";
           }
         } catch (e) {
           console.error(e);
-          hasMore = false;
-          spinner.style.display = 'none';
-          loadingText.innerText = "网络错误";
+          loadingText.innerText = "网络请求失败: " + e.message;
         } finally {
           isLoading = false;
         }
       }
 
+      // Lightbox 逻辑
+      function openLightbox(url) {
+        viewer.classList.add('active');
+        fullImage.style.display = 'none';
+        viewerLoading.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        fullImage.src = url;
+        fullImage.onload = () => {
+          viewerLoading.style.display = 'none';
+          fullImage.style.display = 'block';
+        };
+      }
+      function closeLightbox() {
+        viewer.classList.remove('active');
+        fullImage.src = '';
+        document.body.style.overflow = 'auto';
+      }
+      viewerClose.onclick = closeLightbox;
+      viewer.onclick = (e) => { if (e.target === viewer) closeLightbox(); };
+
       const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          loadNextPage();
-        }
-      }, {
-        root: null,
-        rootMargin: '200px',
-        threshold: 0.1
-      });
+        if (entries[0].isIntersecting) loadNextPage();
+      }, { root: null, rootMargin: '200px', threshold: 0.1 });
       observer.observe(sentinel);
     });
   </script>
 </body>
+
 </html>
