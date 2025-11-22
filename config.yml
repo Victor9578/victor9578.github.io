@@ -1,4 +1,4 @@
-baseURL: "https://www.jaywxl.eu.org/"
+baseURL: "http://www.jaywxl.eu.org/"
 title: Jaywxl
 theme: PaperMod
 defaultContentLanguage: cn
@@ -6,7 +6,7 @@ languageCode: zh-cn
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
 TimeZone: Asia/Shanghai
 
-paginate: 8
+paginate: 2
 
 outputs:
     home:
@@ -20,34 +20,35 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
-googleAnalytics: 
 
 minify:
     disableXML: true
     # minifyOutput: true
 
 languages:
-    # 偷懒，直接使用en的国际化
     cn:
         languageName: "Chinese"
         weight: 1
         menu:
             main:
-                - name: Archive
-                  url: archives/
-                  weight: 10
-                - name: Search
-                  url: search/
-                  weight: 13
-                - name: Tags
-                  url: tags/
-                  weight: 12
-                - name: Categories
-                  url: categories/
-                  weight: 11
+                # - name: Archive
+                #   url: archive/
+                #   weight: 10
+                # - name: Search
+                #   url: search/
+                #   weight: 13
+                # - name: Tags
+                #   url: tags/
+                #   weight: 12
+                # - name: Categories
+                #   url: categories/
+                #   weight: 11
                 - name: Camera
                   url: camera/
                   weight: 13
+                - name: About
+                  url: about/
+                  weight: 15
 
 
 params:
@@ -57,7 +58,7 @@ params:
     # author: ["Me", "You"] # multiple authors
     keywords: ["hugo", "Blog",]
 
-    twikoo: 
+    twikoo:
         version: "1.6.x"
         region: "ap-shanghai"
         id: "https://twikoo.xxx.xxx/"
@@ -102,7 +103,8 @@ params:
     homeInfoParams:
         Title: "Hi Friends!👋"
         Content: >
-            欢迎来到我的站点！😁
+            欢迎来到我的站点！
+
     socialIcons:
         - name: email
           url: "mailto:jaywxll@outlook.com"
@@ -133,32 +135,12 @@ params:
         favicon32x32: "/favicon/favicon-32x32.png"
         apple_touch_icon: "/favicon/apple-touch-icon.png"
 
-    # Verify your site ownership
-    analytics: 
-        google:
-            SiteVerificationTag: "xx"
-        # bing:
-        #    SiteVerificationTag:
-        #yandex:
-        #    SiteVerificationTag: "3975215bf5f68fc0"
-        baidu:
-            SiteVerificationTag: "xx"
 
     cover:
         hidden: false # hide everywhere but not in structured data
         hiddenInList: false # hide on list pages and home
         hiddenInSingle: false # hide on single page
 
-    # for search
-    # https://fusejs.io/api/options.html
-    # fuseOpts:
-    #     isCaseSensitive: false
-    #     shouldSort: true
-    #     location: 0
-    #     distance: 1000
-    #     threshold: 0.4
-    #     minMatchCharLength: 0
-    #     keys: ["title", "permalink", "summary", "content"]
 
 taxonomies:
     category: categories
