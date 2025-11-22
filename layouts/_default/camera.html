@@ -6,45 +6,29 @@
   {{ partial "head.html" . }}
   <style>
     /* ================== 0. 核心变量适配 (修复暗黑模式) ================== */
-    /* 
-       PaperMod 使用 CSS 变量：
-       --theme: 背景色
-       --entry: 卡片背景色
-       --primary: 主要文字色
-       --nav-width: 导航栏宽度
-       --gap: 间距
-    */
-    /* 定义我们自己需要的变量，默认跟随主题变量 */
     :root {
       --gallery-gap: 4px;
       --gallery-header-bg: rgba(255, 255, 255, 0.95);
-      /* 浅色模式吸顶条 */
       --gallery-border: rgba(0, 0, 0, 0.05);
     }
 
-    /* ★★★ 关键：当 body 有 dark 类时（PaperMod 暗黑模式激活） ★★★ */
     body.dark {
       --gallery-header-bg: rgba(29, 30, 32, 0.95);
-      /* 深色模式吸顶条 (PaperMod 深灰) */
       --gallery-border: rgba(255, 255, 255, 0.1);
     }
 
     /* ================== 1. 基础布局 ================== */
     body {
       overflow-x: hidden;
-      /* 使用主题变量，这样切换按钮一按，背景自动变 */
       background-color: var(--theme) !important;
       color: var(--primary) !important;
       padding-bottom: 50px;
     }
 
-    /* 修复宽度问题：恢复你之前的计算公式 */
     #gallery-root {
       margin: 0 auto;
       padding: 0;
-      /* 既然计算公式里含了 gap，这里 padding 可以去掉或微调 */
       width: 100%;
-      /* 你的自定义宽度公式 */
       max-width: calc(var(--nav-width) + var(--gap) * 2);
     }
 
@@ -58,11 +42,9 @@
       font-size: 1.5rem;
       font-weight: 400;
       color: var(--primary);
-      /* 跟随主题文字色 */
       padding: 24px 8px 16px;
       position: sticky;
       top: 0;
-      /* 使用我们上面适配好的背景变量 */
       background-color: var(--gallery-header-bg);
       backdrop-filter: blur(10px);
       z-index: 90;
@@ -74,7 +56,6 @@
     .photo-grid {
       display: flex;
       flex-wrap: wrap;
-      /* 使用负 margin 抵消间距 */
       margin: calc(var(--gallery-gap) * -1);
     }
 
@@ -86,12 +67,10 @@
     .photo-item {
       margin: var(--gallery-gap);
       position: relative;
-      /* 使用主题的 entry 变量 (卡片背景色)，暗黑模式下会自动变深灰 */
       background-color: var(--entry);
       overflow: hidden;
       cursor: zoom-in;
       border-radius: 4px;
-      /* 稍微弱化阴影，PaperMod 风格比较扁平 */
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -127,7 +106,6 @@
       text-align: center;
       padding: 40px;
       color: var(--secondary);
-      /* 使用主题次级文字色 */
       font-size: 14px;
     }
 
@@ -191,30 +169,32 @@
       z-index: 1001;
       display: flex;
       gap: 20px;
-      /* 按钮之间的间距 */
     }
 
-    /* 按钮通用样式 */
+    /* 按钮通用样式 (针对包含 SVG 的 span) */
     #viewer-close,
     #viewer-fullscreen {
-      color: #fff;
-      font-size: 35px;
-      font-weight: bold;
       cursor: pointer;
       user-select: none;
       transition: opacity 0.2s;
-      line-height: 1;
+      /* 确保 SVG 容器是一个块级或行内块 */
+      display: inline-block;
+      /* 设置 SVG 颜色为白色 */
+      color: #fff;
+    }
+
+    /* 确保 SVG 自身大小 */
+    #viewer-close svg,
+    #viewer-fullscreen svg {
+      width: 32px;
+      height: 32px;
+      /* 让 SVG 继承父级 span 的颜色 */
+      fill: currentColor;
     }
 
     #viewer-close:hover,
     #viewer-fullscreen:hover {
       opacity: 0.7;
-    }
-
-    /* 全屏图标调整大小 */
-    #viewer-fullscreen {
-      font-size: 30px;
-      margin-top: 2px;
     }
 
     #full-image {
@@ -224,16 +204,6 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
-    /* 原来的 viewer-close 定位现在由 viewer-toolbar 控制，这里可以移除或简化 */
-    /* #viewer-close {
-        position: absolute;
-        top: 30px;
-        right: 40px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-    } */
     #viewer-loading {
       position: absolute;
       color: #fff;
@@ -261,7 +231,6 @@
     }
   </style>
 </head>
-<!-- 给 body 加 id="top"，让回顶按钮生效 -->
 
 <body class="list" id="top">
   <!-- 导航栏 -->
@@ -274,18 +243,28 @@
       <div id="loading-text">正在连接云端相册...</div>
     </div>
   </main>
-  <!-- Lightbox (修改了结构) -->
+  <!-- Lightbox (修改了结构并嵌入 SVG) -->
   <div id="image-viewer">
     <div class="viewer-toolbar">
-      <span id="viewer-fullscreen" title="全屏模式">⛶</span>
-      <span id="viewer-close">&times;</span>
+      <span id="viewer-fullscreen" title="全屏模式">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="m15 3l2.3 2.3l-2.89 2.87l1.42 1.42L18.7 6.7L21 9V3zM3 9l2.3-2.3l2.87 2.89l1.42-1.42L6.7 5.3L9 3H3zm6 12l-2.3-2.3l2.89-2.87l-1.42-1.42L5.3 17.3L3 15v6zm12-6l-2.3 2.3l-2.87-2.89l-1.42 1.42l2.89 2.87L15 21h6z" />
+        </svg>
+      </span>
+      <span id="viewer-close" title="关闭">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
+        </svg>
+      </span>
     </div>
     <div id="viewer-loading" class="spinner" style="border-top-color: #fff;"></div>
     <img id="full-image">
   </div>
   <!-- 页脚 (PaperMod 的回到顶部按钮 top-link 在这里) -->
   {{ partial "footer.html" . }}
-  <!-- JS 逻辑 (修改了逻辑) -->
+  <!-- JS 逻辑 (保持不变，因为 DOM ID 没有变) -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // ================= 配置区域 =================
@@ -462,7 +441,8 @@
         if (!document.fullscreenElement) {
           // 请求 viewer 容器全屏
           viewer.requestFullscreen().catch(err => {
-            alert(`无法启用全屏: ${err.message}`);
+            // 浏览器可能需要用户操作才能全屏
+            console.error(`无法启用全屏: ${err.message}`);
           });
         } else {
           document.exitFullscreen();
@@ -482,17 +462,14 @@
 
       // 点击背景关闭
       viewer.onclick = (e) => {
-        // 确保只点击 viewer 本身而不是内部的图片或工具栏才关闭
         if (e.target === viewer || e.target === fullImage) closeLightbox();
       };
 
-      // 按 ESC 键关闭 (浏览器自带 ESC 退出全屏，但我们需要确保在非全屏状态下也能关闭 Lightbox)
+      // 按 ESC 键关闭 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && viewer.classList.contains('active')) {
-          // 如果是全屏状态，ESC 会自动退出全屏，这里保证退出后 Lightbox 也关闭
-          if (!document.fullscreenElement) {
-            closeLightbox();
-          }
+          // 确保退出全屏后 Lightbox 也关闭
+          closeLightbox();
         }
       });
 
