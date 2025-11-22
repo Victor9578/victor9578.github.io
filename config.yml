@@ -45,32 +45,10 @@ languages:
                 - name: Categories
                   url: categories/
                   weight: 11
-    #            - name: 友链
-    #              url: links/
-    #              weight: 4
-    #            - name: 关于
-    #              url: about/
-    #              weight: 3 
+                - name: Camera
+                  url: camera/
+                  weight: 13
 
-
-    # en:
-    #     languageName: "English"
-    #     weight: 1
-    #     menu:
-    #         main:
-    #             - name: Archive
-    #               url: archives
-    #               weight: 15
-    #             - name: Search
-    #               url: search/
-    #               weight: 16
-    #             - name: Tags
-    #               url: tags/
-    #               weight: 14
-    #             - name: Categories
-    #               url: categories/
-    #               weight: 13
-    
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -86,7 +64,7 @@ params:
 
     defaultTheme: auto
     # disableThemeToggle: true
-    # ShowShareButtons: true
+    ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
@@ -103,7 +81,7 @@ params:
     TocOpen: true # toc目录树展开 #
 
     comments: false
-    hideFooter: true # 使用自定义footer(新增备案号)，隐藏原footer
+    hideFooter: true
     katex: false
     images: ["https://i.loli.net/2021/09/26/3OMGXylm8HUYJ6p.png"] # link or path of image for opengraph, twitter-cards
 
