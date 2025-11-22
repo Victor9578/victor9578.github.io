@@ -293,15 +293,13 @@
     document.addEventListener("DOMContentLoaded", function () {
       // ================= 配置区域 =================
       const config = {
-        // ★ 注意：去掉末尾的斜杠 /，防止拼接成 //api/fs/list
         host: "https://la.581019.xyz/alist",
         path: "/Camera",
         baseHeight: 220,
-        targethdThumbSize: 600,  // 列表视图分辨率
-        targetudThumbSize: 1600, // 大图预览分辨率
+        targethdThumbSize: 600,
+        targetudThumbSize: 1600,
         pageSize: 100,
-        // ★ 新增配置：距离底部多少像素时触发加载
-        loadThresholdPx: 500
+        loadThresholdPx: 800
       };
       let currentPage = 1;
       let isLoading = false;
@@ -310,12 +308,10 @@
       const sentinel = document.getElementById('load-sentinel');
       const loadingText = document.getElementById('loading-text');
       const spinner = document.getElementById('loading-spinner');
-      // 预览相关的 DOM
       const viewer = document.getElementById('image-viewer');
       const fullImage = document.getElementById('full-image');
       const viewerLoading = document.getElementById('viewer-loading');
       const viewerClose = document.getElementById('viewer-close');
-      // ★ 新增：全屏按钮
       const viewerFullscreen = document.getElementById('viewer-fullscreen');
       const monthGridCache = new Map();
 
@@ -324,6 +320,7 @@
         const date = new Date(isoDateString);
         return `${date.getFullYear()}/${date.getMonth() + 1}`;
       }
+
       function getMonthGrid(dateLabel) {
         if (monthGridCache.has(dateLabel)) return monthGridCache.get(dateLabel);
         const id = 'month-' + dateLabel.replace(/[\s年月]/g, '-');
@@ -339,32 +336,40 @@
         monthGridCache.set(dateLabel, grid);
         return grid;
       }
-      async function processAndRenderImage(file) {
-        // 1. 初始化变量 (默认用原版缩略图)
+
+      // ★ 新增：获取单个图片尺寸的函数 (返回 Promise)
+      function getImageDimensions(thumbUrl) {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = thumbUrl;
+          img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+          // 如果加载失败，给一个默认比例
+          img.onerror = () => resolve({ width: 4, height: 3 });
+          // 如果图片太大，我们设置一个超时，防止卡死
+          setTimeout(() => resolve({ width: 4, height: 3 }), 3000);
+        });
+      }
+
+      // ★ 渲染函数：只负责创建和插入 DOM 元素
+      function renderImage(file, dims) {
         let hdThumbUrl = file.thumb;
         let udThumbUrl = file.thumb;
-        // 2. 如果是微软链接，则进行高清替换
+
+        // 高清链接处理 (如果存在)
         if (file.thumb && file.thumb.includes('width=') && file.thumb.includes('height=')) {
           hdThumbUrl = file.thumb.replace(/width=\d+/, `width=${config.targethdThumbSize}`)
             .replace(/height=\d+/, `height=${config.targethdThumbSize}`);
           udThumbUrl = file.thumb.replace(/width=\d+/, `width=${config.targetudThumbSize}`)
             .replace(/height=\d+/, `height=${config.targetudThumbSize}`);
         }
-        // 3. 获取尺寸
-        let dims = { width: 400, height: 300 };
-        try {
-          dims = await new Promise((resolve) => {
-            const img = new Image();
-            img.src = file.thumb; // 用原版小图测算，速度快
-            img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
-            img.onerror = () => resolve({ width: 400, height: 300 });
-          });
-        } catch (e) { }
-        // 4. 渲染
-        const dateLabel = getDateLabel(file.modified);
+
+        // 渲染逻辑
+        const dateLabel = getDateLabel(file.created);
         const grid = getMonthGrid(dateLabel);
+
         const flexWidth = dims.width * config.baseHeight / dims.height;
         const paddingBottom = (dims.height / dims.width) * 100;
+
         const itemDiv = document.createElement('div');
         itemDiv.className = 'photo-item';
         itemDiv.style.width = `${flexWidth}px`;
@@ -378,13 +383,16 @@
             onerror="this.style.display='none'">
         `;
         itemDiv.onclick = () => openLightbox(udThumbUrl);
-        grid.appendChild(itemDiv);
+
+        // 返回 DOM 元素和其分组信息，以便后续统一插入
+        return { itemDiv, dateLabel };
       }
 
+      // ★ 核心加载逻辑 (并发处理尺寸获取)
       async function loadNextPage() {
         if (isLoading || !hasMore) return;
         isLoading = true;
-        // 显示加载状态
+
         loadingText.style.display = 'none';
         spinner.style.display = 'inline-block';
 
@@ -396,26 +404,44 @@
           refresh: false
         };
         try {
+          // 1. 发起 API 请求 (等待数据返回)
           const response = await fetch(config.host + "/api/fs/list", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(requestData)
           });
-          // ★ 错误捕捉：如果 Worker 还是返回 HTML，这里会报错
           const contentType = response.headers.get("content-type");
           if (contentType && contentType.indexOf("application/json") === -1) {
-            throw new Error("服务器返回了非 JSON 数据，可能是 Alist 页面 HTML。请检查 Worker 配置。");
+            throw new Error("服务器返回了非 JSON 数据。");
           }
           const result = await response.json();
+
           if (result.code === 200 && result.data.content) {
             const files = result.data.content;
             if (files.length < config.pageSize) {
               hasMore = false;
             }
             const images = files.filter(file => file.type !== 1 && file.thumb);
+
             if (images.length > 0) {
-              images.sort((a, b) => new Date(b.modified) - new Date(a.modified));
-              await Promise.all(images.map(file => processAndRenderImage(file)));
+              // 2. 排序 (基于 created 字段)
+              images.sort((a, b) => new Date(b.created) - new Date(a.created));
+
+              // 3. 并发获取所有图片的尺寸
+              const renderPromises = images.map(async (file) => {
+                const dims = await getImageDimensions(file.thumb);
+                return renderImage(file, dims); // 渲染DOM元素并返回
+              });
+
+              // 4. 等待所有尺寸获取完成和 DOM 创建完成 (这是最耗时的步骤，但现在是高度并发的)
+              const renderedItems = await Promise.all(renderPromises);
+
+              // 5. 统一插入 DOM
+              renderedItems.forEach(({ itemDiv, dateLabel }) => {
+                const grid = getMonthGrid(dateLabel); // 确保月份区块存在
+                grid.appendChild(itemDiv);
+              });
+
               currentPage++;
             } else {
               if (hasMore) {
@@ -438,7 +464,7 @@
             loadingText.innerText = "—— 到底了 ——";
             loadingText.style.marginTop = "20px";
             loadingText.style.display = 'block';
-            window.removeEventListener('scroll', handleScrollLoad); // 移除滚动监听
+            window.removeEventListener('scroll', handleScrollLoad);
           } else {
             spinner.style.display = 'inline-block';
             loadingText.style.display = 'block';
@@ -450,29 +476,18 @@
       // ================= 提前加载监控 (Scroll Listener) =================
 
       function handleScrollLoad() {
-        // 文档总高度
         const totalHeight = document.documentElement.scrollHeight;
-        // 视口高度
         const viewportHeight = window.innerHeight;
-        // 当前滚动位置
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-        // 计算距离底部的距离 (需要滚动多少才能到达底部)
         const remainingDistance = totalHeight - (scrollPosition + viewportHeight);
 
-        // 如果剩余距离小于阈值，并且有更多内容，且当前没有加载任务
         if (remainingDistance < config.loadThresholdPx && hasMore && !isLoading) {
           loadNextPage();
         }
       }
 
-      // 绑定滚动事件监听
       window.addEventListener('scroll', handleScrollLoad);
-
-      // 首次加载（保证第一页内容出来）
       loadNextPage();
-
-      // 注意：删除了原来的 IntersectionObserver 逻辑
 
       // ================= Lightbox 逻辑 (包含全屏) =================
       function openLightbox(url) {
@@ -487,7 +502,6 @@
         };
       }
       function closeLightbox() {
-        // 如果当前是全屏状态，先退出全屏
         if (document.fullscreenElement) {
           document.exitFullscreen().catch(e => console.log(e));
         }
@@ -495,39 +509,30 @@
         fullImage.src = '';
         document.body.style.overflow = 'auto';
       }
-      // ★ 新增：全屏切换函数
       function toggleFullScreen() {
         if (!document.fullscreenElement) {
-          // 请求 viewer 容器全屏
           viewer.requestFullscreen().catch(err => {
-            // 浏览器可能需要用户操作才能全屏
             console.error(`无法启用全屏: ${err.message}`);
           });
         } else {
           document.exitFullscreen();
         }
       }
-      // 绑定事件
       viewerClose.onclick = closeLightbox;
-      // ★ 绑定全屏按钮点击
       if (viewerFullscreen) {
         viewerFullscreen.onclick = (e) => {
-          e.stopPropagation(); // 防止冒泡关闭 viewer
+          e.stopPropagation();
           toggleFullScreen();
         };
       }
-      // 点击背景关闭
       viewer.onclick = (e) => {
         if (e.target === viewer || e.target === fullImage) closeLightbox();
       };
-      // 按 ESC 键关闭 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && viewer.classList.contains('active')) {
-          // 确保退出全屏后 Lightbox 也关闭
           closeLightbox();
         }
       });
-      // 删除了 IntersectionObserver 的代码
     });
   </script>
 </body>
