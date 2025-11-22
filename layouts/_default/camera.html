@@ -171,6 +171,30 @@
       gap: 20px;
     }
 
+    #full-image {
+      /* 默认 Lightbox 状态：保持比例，留黑边 */
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ★★★ 新增：当 #image-viewer 处于全屏模式时的样式 ★★★ */
+    /* :fullscreen 伪类会自动匹配处于全屏模式的元素 */
+    #image-viewer:-webkit-full-screen #full-image,
+    #image-viewer:-moz-full-screen #full-image,
+    #image-viewer:-ms-fullscreen #full-image,
+    #image-viewer:fullscreen #full-image {
+      /* 移除最大尺寸限制 */
+      max-width: 100%;
+      max-height: 100%;
+      /* 核心修改：使用 cover 模式，铺满整个屏幕，超出部分裁剪 */
+      object-fit: cover;
+      /* 全屏状态下通常不需要阴影 */
+      box-shadow: none;
+    }
+
+
     /* 按钮通用样式 (针对包含 SVG 的 span) */
     #viewer-close,
     #viewer-fullscreen {
@@ -275,7 +299,9 @@
         baseHeight: 220,
         targethdThumbSize: 600,  // 列表视图分辨率
         targetudThumbSize: 1600, // 大图预览分辨率
-        pageSize: 30
+        pageSize: 100,
+        // ★ 新增配置：距离底部多少像素时触发加载
+        loadThresholdPx: 500
       };
       let currentPage = 1;
       let isLoading = false;
@@ -284,7 +310,6 @@
       const sentinel = document.getElementById('load-sentinel');
       const loadingText = document.getElementById('loading-text');
       const spinner = document.getElementById('loading-spinner');
-
       // 预览相关的 DOM
       const viewer = document.getElementById('image-viewer');
       const fullImage = document.getElementById('full-image');
@@ -292,7 +317,6 @@
       const viewerClose = document.getElementById('viewer-close');
       // ★ 新增：全屏按钮
       const viewerFullscreen = document.getElementById('viewer-fullscreen');
-
       const monthGridCache = new Map();
 
       function getDateLabel(isoDateString) {
@@ -315,7 +339,6 @@
         monthGridCache.set(dateLabel, grid);
         return grid;
       }
-
       async function processAndRenderImage(file) {
         // 1. 初始化变量 (默认用原版缩略图)
         let hdThumbUrl = file.thumb;
@@ -357,9 +380,14 @@
         itemDiv.onclick = () => openLightbox(udThumbUrl);
         grid.appendChild(itemDiv);
       }
+
       async function loadNextPage() {
         if (isLoading || !hasMore) return;
         isLoading = true;
+        // 显示加载状态
+        loadingText.style.display = 'none';
+        spinner.style.display = 'inline-block';
+
         const requestData = {
           path: config.path,
           password: "",
@@ -383,9 +411,6 @@
             const files = result.data.content;
             if (files.length < config.pageSize) {
               hasMore = false;
-              spinner.style.display = 'none';
-              loadingText.innerText = "—— 到底了 ——";
-              loadingText.style.marginTop = "20px";
             }
             const images = files.filter(file => file.type !== 1 && file.thumb);
             if (images.length > 0) {
@@ -401,19 +426,55 @@
             }
           } else {
             hasMore = false;
-            spinner.style.display = 'none';
-            loadingText.innerText = "加载完毕";
           }
         } catch (e) {
           console.error(e);
           loadingText.innerText = "网络请求失败: " + e.message;
         } finally {
           isLoading = false;
+          // 更新 sentinel 状态
+          if (!hasMore) {
+            spinner.style.display = 'none';
+            loadingText.innerText = "—— 到底了 ——";
+            loadingText.style.marginTop = "20px";
+            loadingText.style.display = 'block';
+            window.removeEventListener('scroll', handleScrollLoad); // 移除滚动监听
+          } else {
+            spinner.style.display = 'inline-block';
+            loadingText.style.display = 'block';
+            loadingText.innerText = "正在加载...";
+          }
         }
       }
 
-      // ================= Lightbox 逻辑 (包含全屏) =================
+      // ================= 提前加载监控 (Scroll Listener) =================
 
+      function handleScrollLoad() {
+        // 文档总高度
+        const totalHeight = document.documentElement.scrollHeight;
+        // 视口高度
+        const viewportHeight = window.innerHeight;
+        // 当前滚动位置
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        // 计算距离底部的距离 (需要滚动多少才能到达底部)
+        const remainingDistance = totalHeight - (scrollPosition + viewportHeight);
+
+        // 如果剩余距离小于阈值，并且有更多内容，且当前没有加载任务
+        if (remainingDistance < config.loadThresholdPx && hasMore && !isLoading) {
+          loadNextPage();
+        }
+      }
+
+      // 绑定滚动事件监听
+      window.addEventListener('scroll', handleScrollLoad);
+
+      // 首次加载（保证第一页内容出来）
+      loadNextPage();
+
+      // 注意：删除了原来的 IntersectionObserver 逻辑
+
+      // ================= Lightbox 逻辑 (包含全屏) =================
       function openLightbox(url) {
         viewer.classList.add('active');
         fullImage.style.display = 'none';
@@ -425,7 +486,6 @@
           fullImage.style.display = 'block';
         };
       }
-
       function closeLightbox() {
         // 如果当前是全屏状态，先退出全屏
         if (document.fullscreenElement) {
@@ -435,7 +495,6 @@
         fullImage.src = '';
         document.body.style.overflow = 'auto';
       }
-
       // ★ 新增：全屏切换函数
       function toggleFullScreen() {
         if (!document.fullscreenElement) {
@@ -448,10 +507,8 @@
           document.exitFullscreen();
         }
       }
-
       // 绑定事件
       viewerClose.onclick = closeLightbox;
-
       // ★ 绑定全屏按钮点击
       if (viewerFullscreen) {
         viewerFullscreen.onclick = (e) => {
@@ -459,12 +516,10 @@
           toggleFullScreen();
         };
       }
-
       // 点击背景关闭
       viewer.onclick = (e) => {
         if (e.target === viewer || e.target === fullImage) closeLightbox();
       };
-
       // 按 ESC 键关闭 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && viewer.classList.contains('active')) {
@@ -472,11 +527,7 @@
           closeLightbox();
         }
       });
-
-      const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) loadNextPage();
-      }, { root: null, rootMargin: '200px', threshold: 0.1 });
-      observer.observe(sentinel);
+      // 删除了 IntersectionObserver 的代码
     });
   </script>
 </body>
