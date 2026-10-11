@@ -322,23 +322,21 @@
         return grid;
       }
       
-           /** 处理单个图片文件，计算尺寸并渲染到网格中 */
+          
+      /** 处理单个图片文件，计算尺寸并渲染到网格中 */
       async function processAndRenderImage(file) {
-        // 1. 缩略图 URL 处理
-        // 百度提供的高清图直接作为预览图和灯箱高清图使用
         const hdThumbUrl = file.thumb;
         const udThumbUrl = file.thumb;
       
-        // 2. 初始预估尺寸（默认按单反标准的 3:2 比例占位，避免页面剧烈抖动）
+        // 1. 初始预估单反 3:2 占位
         let dims = { width: file.width || 900, height: file.height || 600 };
       
-        // 3. 计算初始瀑布流布局所需参数
         const dateLabel = getDateLabel(file);
         const grid = getMonthGrid(dateLabel);
         const flexWidth = dims.width * config.baseHeight / dims.height;
         const paddingBottom = (dims.height / dims.width) * 100;
       
-        // 4. 构建 DOM
+        // 2. 构建 DOM
         const itemDiv = document.createElement('div');
         itemDiv.className = 'photo-item';
         itemDiv.style.width = `${flexWidth}px`;
@@ -351,34 +349,36 @@
             onerror="this.style.display='none'">
         `;
       
-        // ★ 核心改动：图片下载完成后，根据真实像素比例自动纠正容器
         const img = itemDiv.querySelector('img');
-        img.onload = function () {
-          this.classList.add('loaded');
-          // 如果读取到了真实尺寸（哪怕是竖图、方图、全景图）
-          if (this.naturalWidth && this.naturalHeight) {
-            const realRatio = this.naturalWidth / this.naturalHeight;
+      
+        // 自适应纠偏逻辑
+        function updateAspectRatio() {
+          img.classList.add('loaded');
+          if (img.naturalWidth && img.naturalHeight) {
+            const realRatio = img.naturalWidth / img.naturalHeight;
             const realFlex = realRatio * config.baseHeight;
             
-            // 更新 itemDiv 的 flex 比例
             itemDiv.style.width = `${realFlex}px`;
             itemDiv.style.flexGrow = realFlex;
             
-            // 更新占位比例，防止竖图被拉伸或高度不对
             const placeholder = itemDiv.querySelector('.photo-placeholder');
             if (placeholder) {
               placeholder.style.paddingBottom = `${(1 / realRatio) * 100}%`;
             }
           }
-        };
+        }
+      
+        img.onload = updateAspectRatio;
+        // 防止缓存命中导致 onload 不触发
+        if (img.complete && img.naturalWidth) {
+          updateAspectRatio();
+        }
       
         itemDiv.onclick = () => openLightbox(udThumbUrl);
         grid.appendChild(itemDiv);
       
-        // 返回图片元素用于观察者注册
         return img;
       }
-
       // ================= Intersection Observer 逻辑 =================
 
       function initObserver() {
